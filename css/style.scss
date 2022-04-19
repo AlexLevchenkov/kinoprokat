@@ -827,4 +827,7 @@ h2.off,p.off{display: none;}
       }
     }
   }
+  .projects{
+    grid-template-columns: repeat(1, 1fr);
+  }
 }

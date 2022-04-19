@@ -1147,4 +1147,5 @@ body.main.vertical section .container > #contacts {
   .news .news_projects_block:hover .news_projects_block_hover {
     opacity: 0;
   }
+  .projects{grid-template-columns: repeat(1, 1fr);}
 }
