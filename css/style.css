@@ -1148,4 +1148,8 @@ body.main.vertical section .container > #contacts {
     opacity: 0;
   }
   .projects{grid-template-columns: repeat(1, 1fr);}
+  .projects > .news_projects_block{height: 230px;}
+  .projects > .news_projects_block .news_projects_block_img {height: 155px;}
+  .projects > .news_projects_block .project_name{margin: 5px 90px 0 10px;}
+  .projects > .news_projects_block .project_name a{font-size: 16px;}
 }
