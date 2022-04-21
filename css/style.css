@@ -144,8 +144,10 @@ body::-webkit-scrollbar-thumb {
   top: 0;
   bottom: 0;
   background-color: #888;
-  z-index: 10000000;
+  z-index: 50;
   padding: 20px;
+  -webkit-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
 }
 
 .mobile_menu .mobile_menu_block .mobile_menu_list {
