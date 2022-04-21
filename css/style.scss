@@ -96,10 +96,9 @@ body{
     }
   }
   & .mobile_menu_block{
-    display: none;
     position: fixed;
-    left: 0;
-    right: 0;
+    left: -100%;
+    right: 100%;
     top: 0;
     bottom: 0;
     background-color: #888;
@@ -111,7 +110,7 @@ body{
       height: 1200px;
       max-height: 100%; 
     }
-    &.open{display: block;}
+    &.open{left: 0;right: 0;}
     & .link{
       list-style-type: none;
       & a{
