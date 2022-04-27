@@ -270,6 +270,13 @@ h2.off,p.off{display: none;}
         color: #fff;
         font-size: 22px;
       }
+      &>#ua.selected{
+        background: url("../img/v_1/language_target_ua.png");
+        background-repeat: no-repeat;
+        background-size: contain, cover;
+        background-position: center;
+        background-position-y: 8px;
+      }
     }
   }
 }
@@ -735,7 +742,7 @@ h2.off,p.off{display: none;}
   body.production section.menu{top: 50px;}
   body.production section.main{padding-top: 100px;}
   body.main .footer{position: absolute;padding-top: 0;background: none;}
-  section.main{padding-top: 60px;}
+  section.main{padding-top: 60px; height: 95vh;}
   .footer{
     position: fixed;
     padding-top: 5px;
