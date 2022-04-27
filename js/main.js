@@ -23,4 +23,70 @@ $(document).ready(function(){
     $(".mobile_menu_block").removeClass("open")
     $("body").removeClass("mobile_menu_open")
   })
+
+  //Фильтр таблицы
+  $(".table_clear").click(function () {
+    clearFilterTable($(this).parents('table'));
+  })
+  
+  $('.table-filters select.main').on('input', function () {
+    filterTable($(this).parents('table'));
+  });
+  $('.table-filters select.year').on('input', function () {
+    filterYearTable($(this).parents('table'));
+  });
+
+  function clearFilterTable($table){
+    var $filters = $table.find('.table-filters td');
+    var $rows = $table.find('.table-row');
+    $filters.find('select').val("");
+    $rows.each(function () {$(this).css('display', '')});
+  }
+
+  function filterTable($table) {
+    var $filters = $table.find('.table-filters td');
+    var $rows = $table.find('.table-row');
+    $rows.each(function (rowIndex) {
+      var valid = false;
+      $(this).find('td').each(function (colIndex) {
+        if ($filters.eq(colIndex).find('select').val()) {
+          if ($(this).html().toLowerCase() == $filters.eq(colIndex).find('select').val().toLowerCase()) {
+            valid = true;
+          }
+        }
+      });
+      if (valid === true) {
+        $(this).css('display', '');
+      } else {
+        $(this).css('display', 'none');
+      }
+    });
+  }
+  function filterYearTable($table) {
+    var $filters = $table.find('.table-filters td');
+    var $rows = $table.find('.table-row');
+    $rows.each(function (rowIndex) {
+      var valid = true;
+      $(this).find('td').each(function (colIndex) {
+        if ($filters.eq(colIndex).find('select').val()) {
+          if ($(this).html().toLowerCase().indexOf(
+          $filters.eq(colIndex).find('select').val().toLowerCase()) == -1) {
+            valid = valid && false;
+          }
+        }
+      });
+      if (valid === true) {
+        $(this).css('display', '');
+      } else {
+        $(this).css('display', 'none');
+      }
+    });
+  }
+
+
+  // let set = new Set();
+  // $(".table-row").each(function () {
+  //   set.add($(this).find($("td:nth-child(2)")).html());
+  // })
+  // console.log([...set].join(' ,'));
 });
