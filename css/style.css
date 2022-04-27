@@ -448,6 +448,14 @@ h2.off, p.off {
   font-size: 22px;
 }
 
+.header > .container .language_options > #ua.selected {
+  background: url("../img/v_1/language_target_ua.png");
+  background-repeat: no-repeat;
+  background-size: contain, cover;
+  background-position: center;
+  background-position-y: 8px;
+}
+
 .main_menu {
   height: auto;
   max-width: 500px;
@@ -1070,6 +1078,7 @@ h2.off, p.off {
   }
   section.main {
     padding-top: 60px;
+    height: 95vh;
   }
   .footer {
     position: fixed;
