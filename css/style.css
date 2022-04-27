@@ -994,6 +994,7 @@ h2.off, p.off {
   list-style-type: disc;
 }
 
+<<<<<<< HEAD
 .table {
   background-color: #fff;
   color: #000;
@@ -1035,6 +1036,8 @@ h2.off, p.off {
   border: #000 2px solid;
 }
 
+=======
+>>>>>>> aec08ec576faf0642b6a94cb1982261a5f40cb31
 @media (max-width: 1380px) {
   .mobile_menu {
     display: block;
