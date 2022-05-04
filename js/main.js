@@ -84,6 +84,27 @@ $(document).ready(function(){
   }
 
 
+  // Сокрытие хедера на мольной версии
+
+  if (wind_width<700) {
+    console.log("Hello!!!");
+    let lastScroll = 0;
+    const defaultOffset = 50;
+    const header = document.querySelector('.header');
+
+    const scrollPosition = () => window.pageYOffset || document.documentElement.scrollTo
+    const containHide = () => header.classList.contains('hide');
+
+    window.addEventListener('scroll', () => {
+      if (scrollPosition() > lastScroll && !containHide() && scrollPosition() > defaultOffset) {
+        header.classList.add('hide');
+      } else if (scrollPosition() < lastScroll && containHide()){
+        header.classList.remove('hide');
+      }
+      lastScroll = scrollPosition();
+    })
+  }
+
   // let set = new Set();
   // $(".table-row").each(function () {
   //   set.add($(this).find($("td:nth-child(2)")).html());

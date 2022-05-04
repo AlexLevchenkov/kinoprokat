@@ -127,14 +127,11 @@ body::-webkit-scrollbar-thumb {
   width: 25px;
   -webkit-transform: translate(0, -50%);
           transform: translate(0, -50%);
-  border-top: 3px solid #fff;
-  border-bottom: 3px solid #fff;
+  height: 45px;
 }
 
-.mobile_menu .burger hr {
-  height: 3px;
-  background-color: #fff;
-  margin: 6px 0;
+.mobile_menu .burger img {
+  height: 45px;
 }
 
 .mobile_menu .mobile_menu_block {
@@ -363,6 +360,22 @@ h2.off, p.off {
   height: 80%;
 }
 
+.block_name {
+  max-width: 1200px;
+  margin: 5px auto;
+  font-family: 'DIN Pro Regular';
+  width: 100%;
+  background: #333333;
+  background: -webkit-gradient(linear, left bottom, left top, from(#333333), to(rgba(0, 0, 0, 0.95)));
+  background: linear-gradient(0deg, #333333 0%, rgba(0, 0, 0, 0.95) 100%);
+  border-radius: 10px;
+  padding: 10px 0px;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 40px;
+  text-align: center;
+}
+
 .header {
   position: fixed;
   background: #eee;
@@ -370,6 +383,16 @@ h2.off, p.off {
   left: 0;
   right: 0;
   top: 0;
+  height: 73px;
+  -webkit-transition: -webkit-transform .1s linear;
+  transition: -webkit-transform .1s linear;
+  transition: transform .1s linear;
+  transition: transform .1s linear, -webkit-transform .1s linear;
+}
+
+.header.hide {
+  -webkit-transform: translateY(-73px);
+          transform: translateY(-73px);
 }
 
 .header > .container {
@@ -443,8 +466,7 @@ h2.off, p.off {
   background-repeat: no-repeat;
   background-size: contain, cover;
   background-position: center;
-  background-position-y: 8px;
-  color: #fff;
+  background-position-y: 6px;
   font-size: 22px;
 }
 
@@ -453,7 +475,9 @@ h2.off, p.off {
   background-repeat: no-repeat;
   background-size: contain, cover;
   background-position: center;
-  background-position-y: 8px;
+  background-position-y: 6px;
+  color: #000 !important;
+  text-shadow: 2px 0 2px #fff,  0 2px 2px #fff,  -2px 0 2px #fff,  0 -2px 2px #fff;
 }
 
 .main_menu {
@@ -729,7 +753,7 @@ h2.off, p.off {
 }
 
 .news_projects {
-  padding: 50px 0;
+  padding-bottom: 50px;
 }
 
 .news_projects .news_projects_block {
@@ -798,8 +822,9 @@ h2.off, p.off {
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
-  background: #fff;
-  border-radius: 100px;
+  background: #d53543;
+  background: linear-gradient(235deg, #d53543 0%, #712324 100%);
+  border-radius: 15px;
   width: 120px;
   height: 40px;
   display: -webkit-box;
@@ -811,8 +836,25 @@ h2.off, p.off {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  color: #000;
+  color: #fff;
   margin-top: auto;
+  text-transform: uppercase;
+}
+
+.news .news_projects_block:hover .news_projects_block_text {
+  background: #d53543;
+  background: linear-gradient(235deg, #d53543 0%, #712324 100%);
+  width: 100%;
+  height: 75px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  padding: 5px;
+  color: #fff;
+}
+
+.news .news_projects_block:hover .news_projects_block_text h2 {
+  color: #fff;
 }
 
 .news .news_projects_block:hover img {
@@ -836,6 +878,22 @@ h2.off, p.off {
 
 .projects > .news_projects_block {
   height: 350px;
+}
+
+.projects > .news_projects_block:hover .news_projects_block_text {
+  background: #d53543;
+  background: linear-gradient(235deg, #d53543 0%, #712324 100%);
+  width: 100%;
+  height: 70px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  padding: 0 5px;
+  color: #fff;
+}
+
+.projects > .news_projects_block:hover .news_projects_block_text a {
+  color: #fff;
 }
 
 .projects > .news_projects_block .news_projects_block_img {
@@ -994,7 +1052,6 @@ h2.off, p.off {
   list-style-type: disc;
 }
 
-<<<<<<< HEAD
 .table {
   background-color: #fff;
   color: #000;
@@ -1032,12 +1089,10 @@ h2.off, p.off {
   background-color: #f9f9f9;
 }
 
-.table input {
+.table select {
   border: #000 2px solid;
 }
 
-=======
->>>>>>> aec08ec576faf0642b6a94cb1982261a5f40cb31
 @media (max-width: 1380px) {
   .mobile_menu {
     display: block;
@@ -1119,6 +1174,22 @@ h2.off, p.off {
     position: absolute;
     padding-top: 0;
     background: none;
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+  .header > .container .logo {
+    width: 55px;
+    overflow: hidden;
+    border-radius: 15px;
+  }
+  .header > .container .logo img {
+    width: 200px;
+  }
+  .main .header > .container .logo {
+    width: auto;
+  }
+  .main .header > .container .logo img {
+    width: 100%;
   }
   section.main {
     padding-top: 60px;
@@ -1128,6 +1199,12 @@ h2.off, p.off {
     position: fixed;
     padding-top: 5px;
     background: rgba(0, 0, 0, 0.7);
+    -webkit-transition: -webkit-transform .1s linear;
+    transition: -webkit-transform .1s linear;
+    transition: transform .1s linear;
+    transition: transform .1s linear, -webkit-transform .1s linear;
+    -webkit-transform: translateY(100px);
+            transform: translateY(100px);
   }
   .footer .container .social {
     height: 8vw;
@@ -1155,6 +1232,11 @@ h2.off, p.off {
   .footer .container #switcher img {
     width: 15vw;
     height: 15vw;
+  }
+  .mobile_menu_open .footer {
+    z-index: 100;
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
   }
   .social_icon {
     min-height: 20px;
@@ -1238,4 +1320,84 @@ h2.off, p.off {
   .projects > .news_projects_block .project_name a {
     font-size: 16px;
   }
+}
+
+.wc-block-product-categories-list {
+  display: none;
+}
+
+.home img {
+  width: 50px !important;
+}
+
+.home {
+  display: block;
+}
+
+.home li:nth-child(1) {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: A;
+}
+
+.home li:nth-child(2) {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: B;
+}
+
+.home li:nth-child(3) {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: C;
+}
+
+.home li:nth-child(4) {
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  grid-area: D;
+}
+
+.home li:nth-child(5) {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  grid-area: E;
+}
+
+.home li:nth-child(6) {
+  -ms-grid-row: 3;
+  -ms-grid-column: 2;
+  grid-area: F;
+}
+
+.home li:nth-child(7) {
+  grid-area: G;
+}
+
+.home li:nth-child(8) {
+  grid-area: H;
+}
+
+.home li:nth-child(9) {
+  grid-area: I;
+}
+
+.home li:nth-child(10) {
+  grid-area: J;
+}
+
+.home li:nth-child(11) {
+  grid-area: K;
+}
+
+.home li:nth-child(12) {
+  grid-area: L;
+}
+
+.home li:nth-child(13) {
+  grid-area: M;
+}
+
+.home li:nth-child(14) {
+  grid-area: N;
 }
