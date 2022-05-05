@@ -17,16 +17,12 @@ body{
     & .header{background: #353535;}
     & .services{color: #fff;}
     & .services .services_blocks .services_block .services_item{border: 2px solid #eee;}
+    & .language_options{background-image: url(../img/v_1/language_back_dark.png);}
   }
   &.light{
-    & .menu .main_menu h2{
-      color: #000;
-    }& .mobile_menu .burger{
-      border-color: #000;
-      & hr{
-        background-color: #000;
-      }
-    }
+    & .menu .main_menu h2{color: #000;}
+    & .mobile_menu .burger{border-color: #000;& hr{background-color: #000;}}
+    & .language_options{background-image: url(../img/v_1/language_back_light.png);}
   }
   &.main{
     & .header{position: absolute; background: none;}
@@ -239,7 +235,7 @@ h2.off,p.off{display: none;}
     display: flex;
     justify-content: space-between;
     position: relative;
-    & .logo img, & .language img{
+    & .logo img{
       max-width:200px;
       width: 100%;
     }
@@ -255,6 +251,9 @@ h2.off,p.off{display: none;}
     & .language{
       position: relative;
       right: 0;
+      & img{
+        display: none;
+      }
     }
     & .language_options{
       font-family: 'DIN Pro Regular';
@@ -267,6 +266,7 @@ h2.off,p.off{display: none;}
       width: 100%;
       height: 100%;
       padding: 0 5px;
+      background-size: 100% 100%;
       &>button{
         display: flex;
         justify-content: center;
@@ -426,7 +426,7 @@ h2.off,p.off{display: none;}
   }
 }
 .social_icon{fill:#000;display: block;height: 28px;width: 28px;margin: 0 auto;transition: fill 0.1s linear;}
-#linkedin .social_icon{height: 20px;width: 20px;}
+#linkedin .social_icon{height: 20px;width: 20px; }
 .services{
   font-family: 'DIN Pro Regular';
   padding-bottom: 50px;
@@ -839,6 +839,35 @@ h2.off,p.off{display: none;}
         & img{
           width: 200px;
         }
+      }
+      & .language{
+        & .language_options{
+          width: 33%;
+          left: auto;
+          transition: width 1s;
+          & .language_option{
+            width: 0;
+            overflow: hidden;
+            transition: width 1s;
+            &.selected{
+              width: 100%;
+              background-size: 100% 75%;
+            }
+          }
+        }
+        &.open .language_options{
+          width: 100%;
+          & .language_option{
+            width: 33.33333%;
+            &.selected{
+              width: 33.33333%;
+              background-size: contain, cover;
+            }
+          }
+        }
+      }
+      & .logo, & .language{
+        width: 50%;
       }
     }
   }

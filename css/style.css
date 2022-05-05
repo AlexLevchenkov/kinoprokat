@@ -32,6 +32,10 @@ body.dark .services .services_blocks .services_block .services_item {
   border: 2px solid #eee;
 }
 
+body.dark .language_options {
+  background-image: url(../img/v_1/language_back_dark.png);
+}
+
 body.light .menu .main_menu h2 {
   color: #000;
 }
@@ -42,6 +46,10 @@ body.light .mobile_menu .burger {
 
 body.light .mobile_menu .burger hr {
   background-color: #000;
+}
+
+body.light .language_options {
+  background-image: url(../img/v_1/language_back_light.png);
 }
 
 body.main .header {
@@ -405,7 +413,7 @@ h2.off, p.off {
   position: relative;
 }
 
-.header > .container .logo img, .header > .container .language img {
+.header > .container .logo img {
   max-width: 200px;
   width: 100%;
 }
@@ -426,6 +434,10 @@ h2.off, p.off {
   right: 0;
 }
 
+.header > .container .language img {
+  display: none;
+}
+
 .header > .container .language_options {
   font-family: 'DIN Pro Regular';
   display: -webkit-box;
@@ -439,6 +451,7 @@ h2.off, p.off {
   width: 100%;
   height: 100%;
   padding: 0 5px;
+  background-size: 100% 100%;
 }
 
 .header > .container .language_options > button {
@@ -1184,6 +1197,35 @@ h2.off, p.off {
   }
   .header > .container .logo img {
     width: 200px;
+  }
+  .header > .container .language .language_options {
+    width: 33%;
+    left: auto;
+    -webkit-transition: width 1s;
+    transition: width 1s;
+  }
+  .header > .container .language .language_options .language_option {
+    width: 0;
+    overflow: hidden;
+    -webkit-transition: width 1s;
+    transition: width 1s;
+  }
+  .header > .container .language .language_options .language_option.selected {
+    width: 100%;
+    background-size: 100% 75%;
+  }
+  .header > .container .language.open .language_options {
+    width: 100%;
+  }
+  .header > .container .language.open .language_options .language_option {
+    width: 33.33333%;
+  }
+  .header > .container .language.open .language_options .language_option.selected {
+    width: 33.33333%;
+    background-size: contain, cover;
+  }
+  .header > .container .logo, .header > .container .language {
+    width: 50%;
   }
   .main .header > .container .logo {
     width: auto;
