@@ -1190,48 +1190,47 @@ h2.off, p.off {
     -webkit-transform: translateY(0px);
             transform: translateY(0px);
   }
-  .header > .container .logo {
+  body.main .header .logo, body.main .header .language {
+    width: 45%;
+  }
+  body:not(.main) .header > .container .logo_block {
     width: 55px;
     overflow: hidden;
     border-radius: 15px;
   }
-  .header > .container .logo img {
+  body:not(.main) .header > .container .logo_block img {
     width: 200px;
   }
-  .header > .container .language .language_options {
+  body:not(.main) .header > .container .language .language_options {
     width: 33%;
     left: auto;
     -webkit-transition: width 1s;
     transition: width 1s;
   }
-  .header > .container .language .language_options .language_option {
+  body:not(.main) .header > .container .language .language_options .language_option {
     width: 0;
     overflow: hidden;
     -webkit-transition: width 1s;
     transition: width 1s;
   }
-  .header > .container .language .language_options .language_option.selected {
+  body:not(.main) .header > .container .language .language_options .language_option.selected {
     width: 100%;
     background-size: 100% 75%;
   }
-  .header > .container .language.open .language_options {
+  body:not(.main) .header > .container .language .language_options .language_option#ua.selected {
+    background-size: 100% 75%;
+  }
+  body:not(.main) .header > .container .language.open .language_options {
     width: 100%;
   }
-  .header > .container .language.open .language_options .language_option {
+  body:not(.main) .header > .container .language.open .language_options .language_option {
     width: 33.33333%;
   }
-  .header > .container .language.open .language_options .language_option.selected {
+  body:not(.main) .header > .container .language.open .language_options .language_option.selected {
     width: 33.33333%;
-    background-size: contain, cover;
   }
-  .header > .container .logo, .header > .container .language {
-    width: 50%;
-  }
-  .main .header > .container .logo {
-    width: auto;
-  }
-  .main .header > .container .logo img {
-    width: 100%;
+  body:not(.main) .header > .container .logo, body:not(.main) .header > .container .language {
+    width: 45%;
   }
   section.main {
     padding-top: 60px;
