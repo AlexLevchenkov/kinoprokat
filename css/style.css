@@ -1161,21 +1161,25 @@ h2.off, p.off {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  margin-top: 50px;
+  padding-bottom: 50px;
 }
 
 .production_block .main_menu {
   width: 33%;
   max-width: 200px;
   height: 200px;
-  margin-right: 50px;
+  margin: 50px 25px 0;
 }
 
-.production_block .main_menu:last-child {
-  margin-right: 0;
+.production_block .main_menu h2 {
+  background: none;
+  color: #fff;
+  font-size: 1em;
 }
 
 @media (max-width: 1380px) {

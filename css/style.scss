@@ -818,21 +818,21 @@ h2.off,p.off{display: none;}
 .production_block{
   width: 100%;
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
-  margin-top: 50px;
+  padding-bottom: 50px;
   & .main_menu{
     width: 33%;
     max-width: 200px;
     height: 200px;
-    margin-right: 50px;
-    &:last-child{
-      margin-right: 0;
-    }
+    margin: 50px 25px 0;
     & img{
 
     }
     & h2{
-
+      background: none;
+      color: #fff;
+      font-size: 1em;
     }
   }
 }
