@@ -422,6 +422,7 @@ h2.off, p.off {
 .header > .container .logo img {
   max-width: 200px;
   width: 100%;
+  height: 100%;
 }
 
 .header > .container a svg {
