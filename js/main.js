@@ -106,7 +106,7 @@ $(document).ready(function(){
   $(".info-block__menu-item").click(function() {
     if($(window).width()>768){
       let menu_item = $(this).attr("id")
-      let title = $(".info-block__text")
+      let title = $(".info-block__text-item")
       $.each(title, function(i, value){
         $(value).removeClass("selected")
         $(title).filter(`.${menu_item}`).addClass("selected")
@@ -115,7 +115,7 @@ $(document).ready(function(){
       $(this).addClass("selected")
     }else{
       let menu_item = $(this).attr("id")
-      let title = $(".info-block__text")
+      let title = $(".info-block__text-item")
       $.each(title, function(i, value){
         $(value).removeClass("open")
         $(title).filter(`.${menu_item}`).addClass("open")
@@ -130,5 +130,12 @@ $(document).ready(function(){
         $(this).addClass("open")
       }
     }
+  })
+
+  //Переключатель версий ccs для оборудования
+  $(".controler button").click(function() {
+    let version = $(this).attr("id")
+    $("body").removeClass("v_2").removeClass("v_3")
+    $("body").addClass(version)
   })
 });
