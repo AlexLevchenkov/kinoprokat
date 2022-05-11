@@ -833,6 +833,7 @@ h2.off,p.off{display: none;}
     max-width: 200px;
     height: 200px;
     margin-right: 50px;
+    & h2 {color: #fff;}
     &:last-child {
       margin-right: 0;
     }

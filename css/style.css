@@ -1200,6 +1200,10 @@ h2.off, p.off {
   margin-right: 50px;
 }
 
+.production_block .main_menu h2 {
+  color: #fff;
+}
+
 .production_block .main_menu:last-child {
   margin-right: 0;
 }
