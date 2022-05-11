@@ -77,7 +77,6 @@ body{
   }
   &::-webkit-scrollbar-thumb {
     background: linear-gradient(to top, #ffff00 50%, #0000ff 50%);
-
     border-radius: 9em;
   }
 }
@@ -1035,7 +1034,7 @@ h2.off,p.off{display: none;}
       background: transparent;
     }
     &::-webkit-scrollbar-thumb {
-      background: linear-gradient(0deg, #D23643, #712324);
+      background: linear-gradient(to top, #ffff00 50%, #0000ff 50%);
       border-radius: 9em;
     }
   }

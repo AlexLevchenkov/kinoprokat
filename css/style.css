@@ -1426,8 +1426,8 @@ h2.off, p.off {
     background: transparent;
   }
   .v_2 .info-block__text-block::-webkit-scrollbar-thumb {
-    background: -webkit-gradient(linear, left bottom, left top, from(#D23643), to(#712324));
-    background: linear-gradient(0deg, #D23643, #712324);
+    background: -webkit-gradient(linear, left bottom, left top, color-stop(50%, #ffff00), color-stop(50%, #0000ff));
+    background: linear-gradient(to top, #ffff00 50%, #0000ff 50%);
     border-radius: 9em;
   }
   .v_3 .section_name {
