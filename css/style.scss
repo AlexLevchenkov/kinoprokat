@@ -76,7 +76,8 @@ body{
     background: linear-gradient(0deg, #D23643, #712324);
   }
   &::-webkit-scrollbar-thumb {
-    background: linear-gradient(180deg, #0000ff, #00ff00);
+    background: linear-gradient(to top, #ffff00 50%, #0000ff 50%);
+
     border-radius: 9em;
   }
 }

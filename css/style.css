@@ -140,8 +140,8 @@ body::-webkit-scrollbar {
 }
 
 body::-webkit-scrollbar-thumb {
-  background: -webkit-gradient(linear, left top, left bottom, from(#0000ff), to(#00ff00));
-  background: linear-gradient(180deg, #0000ff, #00ff00);
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(50%, #ffff00), color-stop(50%, #0000ff));
+  background: linear-gradient(to top, #ffff00 50%, #0000ff 50%);
   border-radius: 9em;
 }
 
