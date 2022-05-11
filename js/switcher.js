@@ -52,9 +52,7 @@ $(document).ready(function(){
   }
   // Смена языка
   if ($(window).width()>768) {
-    console.log("1");
     $(".language_option").click(function(){
-      console.log("1.1");
       let leng = $(this).attr("id")
       let title = $(".name")
       $.each(title, function(i, value){
@@ -65,9 +63,7 @@ $(document).ready(function(){
       $(this).addClass("selected")
     })
   } else {
-    console.log("2");
     $(".language_option").click(function(){
-      console.log("3");
       if ($(".language").hasClass("open")) {
         let leng = $(this).attr("id")
         let title = $(".name")
@@ -78,14 +74,11 @@ $(document).ready(function(){
         $(".language_option").removeClass("selected")
         $(this).addClass("selected")
         $(".language").removeClass("open")
-        console.log("5");
       }else{
         $(".language").addClass("open")
-        console.log("6");
       }
     })
   }
-
   $("#ua").click();
   $("#ua").click();
 });
