@@ -1090,43 +1090,183 @@ h2.off, p.off {
 }
 
 .table {
-  background-color: #fff;
-  color: #000;
+  font-family: 'DIN Pro Regular';
   width: 100%;
-  font-size: 16px;
-}
-
-.table thead {
+  border-spacing: 0 5px;
+  color: #fff;
+  font-weight: bold;
   font-size: 20px;
-  padding-bottom: 5px;
-  color: #af0000;
+  border-radius: 5px;
 }
 
-.table thead tr {
+.table tr {
   height: 40px;
 }
 
+.table tr.sub-table {
+  height: auto;
+}
+
+.table thead {
+  border-spacing: 5px;
+}
+
+.table thead tr {
+  height: 45px;
+  background: -webkit-gradient(linear, left bottom, left top, from(#333333), to(rgba(0, 0, 0, 0.95)));
+  background: linear-gradient(0deg, #333333 0%, rgba(0, 0, 0, 0.95) 100%);
+}
+
 .table thead tr th {
+  cursor: pointer;
+  position: relative;
+  border-radius: 10px;
+}
+
+.table thead tr th.col-1 {
+  width: 15%;
+}
+
+.table thead tr th.col-2 {
+  width: 25%;
+}
+
+.table thead tr th.col-3 {
+  width: 45%;
+}
+
+.table thead tr th.col-4 {
+  width: 10%;
+}
+
+.table thead tr th.col-5 {
+  width: 5%;
+}
+
+.table thead tr th select {
+  display: block;
+  font-size: 20px;
+  font-weight: bold;
+  color: #fff;
+  line-height: 1.3;
+  padding: .6em 1.4em .5em .8em;
+  width: 95%;
+  max-width: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  border-radius: .5em;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  background-color: #2b2b2b;
+  background-image: url(/img/production/li_after.png), linear-gradient(-120deg, #D23643, #712324);
+  background-repeat: no-repeat, repeat;
+  background-position: right .7em top 50%, 0 0;
+  background-size: 1em auto, 100%;
+}
+
+.table thead tr th select::-ms-expand {
+  display: none;
+}
+
+.table > tbody > tr:not(.sub-table) {
+  background: -webkit-gradient(linear, left bottom, left top, from(#333333), to(rgba(0, 0, 0, 0.95)));
+  background: linear-gradient(0deg, #333333 0%, rgba(0, 0, 0, 0.95) 100%);
+}
+
+.table > tbody > tr:not(.sub-table) > td {
+  text-align: center;
+}
+
+.table > tbody > tr:not(.sub-table) > td:first-child {
+  border-radius: 10px 0 0 10px;
+}
+
+.table > tbody > tr:not(.sub-table) > td:last-child {
+  border-radius: 0 10px 10px 0;
+}
+
+.table > tbody > tr:not(.sub-table) > td.sub-table-opener {
+  position: relative;
+  cursor: pointer;
+}
+
+.table > tbody > tr:not(.sub-table) > td.sub-table-opener::before, .table > tbody > tr:not(.sub-table) > td.sub-table-opener::after {
+  content: "";
+  position: absolute;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.table > tbody > tr:not(.sub-table) > td.sub-table-opener::before {
+  background: linear-gradient(-120deg, #D23643, #712324);
+  border-radius: 10px;
+  left: 3px;
+  right: 3px;
+  top: 3px;
+  bottom: 3px;
+}
+
+.table > tbody > tr:not(.sub-table) > td.sub-table-opener::after {
+  width: 20px;
+  height: 15px;
+  background-image: url(../img/production/li_after.png);
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.table > tbody > tr:not(.sub-table).open {
+  background: -webkit-gradient(linear, left bottom, left top, from(#D23643), to(#712324));
+  background: linear-gradient(0deg, #D23643, #712324);
+}
+
+.table > tbody > tr:not(.sub-table).open > td.sub-table-opener::before {
+  background: -webkit-gradient(linear, left bottom, left top, from(#333333), to(rgba(0, 0, 0, 0.95)));
+  background: linear-gradient(0deg, #333333 0%, rgba(0, 0, 0, 0.95) 100%);
+}
+
+.table > tbody > tr:not(.sub-table).open > td.sub-table-opener::after {
+  background-image: url(../img/production/li_after_open.png);
+}
+
+.table > tbody tr.sub-table {
+  display: none;
+}
+
+.table > tbody tr.sub-table > td[colspan*="5"] {
   text-align: left;
 }
 
-.table .table-row td {
-  white-space: normal !important;
+.table > tbody tr.sub-table.open {
+  display: table-row;
 }
 
-.table th, .table td {
-  padding: 8px;
-  line-height: 1.42857143;
-  vertical-align: top;
-  border-top: 1px solid #ddd;
+.table > tbody tr.sub-table.open > td {
+  width: 673%;
+  background: none;
 }
 
-.table > tbody > tr:nth-child(odd) > td, .table > tbody > tr:nth-child(odd) > th {
-  background-color: #f9f9f9;
+.table > tbody tr.sub-table.open > td table {
+  width: 75%;
+  margin: 0 auto;
+  border-collapse: collapse;
+  border: #2b2b2b 2px solid;
+  table-layout: fixed;
 }
 
-.table select {
-  border: #000 2px solid;
+.table > tbody tr.sub-table.open > td table > tbody > tr > td {
+  border: 1px solid #fff;
+}
+
+.table > tbody tr.sub-table.open > td table > tbody > tr > td:first-child {
+  padding-left: 20px;
+}
+
+.table > tbody tr.sub-table.open > td table > tbody > tr > td:last-child {
+  padding-left: 10px;
 }
 
 .production_menu_block {
@@ -1830,84 +1970,16 @@ h2.off, p.off {
   .product-block .product-block__info .info-block__text-item.open {
     height: auto !important;
   }
-}
-
-.wc-block-product-categories-list {
-  display: none;
-}
-
-.home img {
-  width: 50px !important;
-}
-
-.home {
-  display: block;
-}
-
-.home li:nth-child(1) {
-  -ms-grid-row: 1;
-  -ms-grid-column: 1;
-  grid-area: A;
-}
-
-.home li:nth-child(2) {
-  -ms-grid-row: 1;
-  -ms-grid-column: 2;
-  grid-area: B;
-}
-
-.home li:nth-child(3) {
-  -ms-grid-row: 2;
-  -ms-grid-column: 1;
-  grid-area: C;
-}
-
-.home li:nth-child(4) {
-  -ms-grid-row: 2;
-  -ms-grid-column: 2;
-  grid-area: D;
-}
-
-.home li:nth-child(5) {
-  -ms-grid-row: 3;
-  -ms-grid-column: 1;
-  grid-area: E;
-}
-
-.home li:nth-child(6) {
-  -ms-grid-row: 3;
-  -ms-grid-column: 2;
-  grid-area: F;
-}
-
-.home li:nth-child(7) {
-  grid-area: G;
-}
-
-.home li:nth-child(8) {
-  grid-area: H;
-}
-
-.home li:nth-child(9) {
-  grid-area: I;
-}
-
-.home li:nth-child(10) {
-  grid-area: J;
-}
-
-.home li:nth-child(11) {
-  grid-area: K;
-}
-
-.home li:nth-child(12) {
-  grid-area: L;
-}
-
-.home li:nth-child(13) {
-  grid-area: M;
-}
-
-.home li:nth-child(14) {
-  grid-area: N;
+  .table {
+    font-size: 12px;
+  }
+  .table > tbody tr.sub-table.open > td {
+    width: 596%;
+  }
+  .table thead tr th.col-1, .table thead tr th.col-2, .table thead tr th.col-3, .table thead tr th.col-4 {
+    width: auto;
+  }
+  .table thead tr th.col-5 {
+    width: 10%;
+  }
 }

@@ -24,28 +24,41 @@ $(document).ready(function(){
     $("body").removeClass("mobile_menu_open")
   })
 
-  //Фильтр таблицы
-  $(".table_clear").click(function () {
+  //Таблица
+
+  // Открытие под-таблцы 
+  $(".sub-table-opener").click(function() {
+    if (!$(this).parent().hasClass("open")) {
+      $(this).parent().addClass("open")
+      $(this).parent().next().addClass("open")
+    }else{
+      $(this).parent().removeClass("open")
+      $(this).parent().next().removeClass("open")
+    }
+  })
+
+  // Фильтр таблицы
+  $("#clear").click(function () {
     clearFilterTable($(this).parents('table'));
   })
   
-  $('.table-filters select.main').on('input', function () {
+  $('select.main').on('input', function () {
     filterTable($(this).parents('table'));
   });
-  $('.table-filters select.year').on('input', function () {
+  $('select.year').on('input', function () {
     filterYearTable($(this).parents('table'));
   });
 
   function clearFilterTable($table){
-    var $filters = $table.find('.table-filters td');
-    var $rows = $table.find('.table-row');
+    var $filters = $table.find('th');
+    var $rows = $table.find('thead~tbody>tr:not(.sub-table)');
     $filters.find('select').val("");
     $rows.each(function () {$(this).css('display', '')});
   }
 
   function filterTable($table) {
-    var $filters = $table.find('.table-filters td');
-    var $rows = $table.find('.table-row');
+    var $filters = $table.find('th');
+    var $rows = $table.find('thead~tbody>tr:not(.sub-table)');
     $rows.each(function (rowIndex) {
       var valid = false;
       $(this).find('td').each(function (colIndex) {
@@ -63,8 +76,8 @@ $(document).ready(function(){
     });
   }
   function filterYearTable($table) {
-    var $filters = $table.find('.table-filters td');
-    var $rows = $table.find('.table-row');
+    var $filters = $table.find('th');
+    var $rows = $table.find('thead~tbody>tr:not(.sub-table)');
     $rows.each(function (rowIndex) {
       var valid = true;
       $(this).find('td').each(function (colIndex) {
