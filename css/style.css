@@ -1145,6 +1145,7 @@ h2.off, p.off {
 
 .table thead tr th select {
   display: block;
+  text-align: center;
   font-size: 20px;
   font-weight: bold;
   color: #fff;
@@ -1160,7 +1161,7 @@ h2.off, p.off {
   -webkit-appearance: none;
   appearance: none;
   background-color: #2b2b2b;
-  background-image: url(/img/production/li_after.png), linear-gradient(-120deg, #D23643, #712324);
+  background-image: url(../img/production/li_after.png), linear-gradient(-120deg, #D23643, #712324);
   background-repeat: no-repeat, repeat;
   background-position: right .7em top 50%, 0 0;
   background-size: 1em auto, 100%;
