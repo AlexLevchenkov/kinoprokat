@@ -12,6 +12,7 @@ body{
   background-color: #d6d9d9;
   position: relative;
   height: 100vh;
+  font-family: 'DIN Pro Regular';
   &.dark{
     background-color: #2b2b2b;
     & .header{background: #353535;}
@@ -20,6 +21,7 @@ body{
     & .language_options{background: linear-gradient(180deg, #2b2b2b, #666666);border-radius: 15px;}
     & .product-block{color: #fff;}
     & .characteristics__table{border: 3px solid #2b2b2b;}
+    & .production_title{color: #fff;}
   }
   &.light{
     & .menu .main_menu h2{color: #000;}
@@ -51,6 +53,7 @@ body{
     & section{padding: 5vh;}
   }
   &.production{
+    section.main{height: 100vh;}
     & .main .main_menu h2{color: #fff;}
     &.horizontal section.main .container {
       grid-template-columns: repeat(4, 1fr);
@@ -156,7 +159,7 @@ body{
   list-style-type: none;
   font-size: 25px;
 }
-section{height: 100vh; padding:11vh 0;}
+section{min-height: 100vh; padding:11vh 0;}
 section>.container a{width: 90%;height: 90%;border-radius: 35px;}
 section.menu{
   position: fixed;
@@ -164,6 +167,7 @@ section.menu{
   margin-right: -50%;
   transform: translate(-50%, -50%);
   height: auto;
+  min-height: auto;
   margin-top: 32px;
   z-index: 100;
   padding: 80px 10px 0 !important;
@@ -925,6 +929,12 @@ h2.off,p.off{display: none;}
   justify-content: center;
   padding-bottom: 50px;
   margin-top: 50px;
+
+  &.audio{
+    margin-top: 30px;
+    justify-content: space-between;
+    padding: 0;
+  }
   & .main_menu {
     width: 33%;
     max-width: 200px;
@@ -983,6 +993,47 @@ h2.off,p.off{display: none;}
       }
     }
   }
+  &.audio .product_menu{
+    max-width: none;
+    width: 48%;
+    text-align: left;
+    margin: 0 0 25px;
+    & img{
+      height: 175px;
+      width: 175px;
+      padding: 5px;
+      background-color: #fff;
+      float: left;
+      margin-right: 30px;
+    }
+    & h2{
+      display: inline-block;
+    }
+    & p{
+      font-size: 1.2em;
+      padding-right: 10px;
+      & span{
+        font-weight: bold;
+      }
+    }
+    &:hover{
+      &::before{
+        width: 185px;
+        height: 185px;
+      }
+      &::after{
+        left: 35px;
+        top: 75px;
+        transform: none;
+      }
+    }
+  }
+}
+.production_title{
+  font-size: 20px;
+  margin-bottom: 20px;
+  text-align: justify;
+  line-height: 1.3em;
 }
 .product-block {
   font-family: 'DIN Pro Regular';
@@ -1029,6 +1080,8 @@ h2.off,p.off{display: none;}
           content: "";
           position: absolute;
           left: 0px;
+          top: 50%;
+          transform: translate(0, -50%);
           width: 21px;
           height: 21px;
           background-image: url("../img/production/li.png");
@@ -1070,11 +1123,17 @@ h2.off,p.off{display: none;}
         &.characteristics {
           .characteristics__table {
             border-collapse: collapse;
+            width: 100%;
+            margin-bottom: 50px;
+            caption{
+              font-size: 1.5em;
+            }
             tr{
+              display: table-row;
               th, td{
                 width: 50%;
                 text-align: left;
-                padding: 5px 0;
+                padding: 5px 10px;
                 border: 2px solid #fff;
               }
             }
@@ -1119,6 +1178,10 @@ h2.off,p.off{display: none;}
         }
       }
     }
+  }
+  &.audio{
+    .img-block__slider img{background: #fff;}
+    .product-block__img span{font-weight: bold;}
   }
 }
 @media(min-width: 769px){
@@ -1383,11 +1446,35 @@ h2.off,p.off{display: none;}
       & .project_name a{font-size: 16px;}
     }
   }
-  .production_block .product_menu{
-    width: 40%;
-    margin: 25px 15px 0;
-    &:hover{
-      &::after,&::before{display: none;}
+  .production_block{
+    & .product_menu{
+      width: 40%;
+      margin: 25px 15px 0;
+      &:hover{
+        &::after,&::before{display: none;}
+      }
+    }
+    &.audio{
+      & .production_title{
+        font-size: 12px;
+        order: 100;
+      }
+      & .product_menu{
+        width: 100%;
+        text-align: left;
+        margin: 0 0 25px;
+        & img{
+          height: 140px;
+          width: 140px;
+          margin-right: 5px;
+        }
+        & h2{
+          font-size: 1.3em;
+        }
+        & p{
+          font-size: 1em;
+        }
+      }
     }
   }
   .product-block {

@@ -12,6 +12,7 @@ body {
   background-color: #d6d9d9;
   position: relative;
   height: 100vh;
+  font-family: 'DIN Pro Regular';
 }
 
 body.dark {
@@ -42,6 +43,10 @@ body.dark .product-block {
 
 body.dark .characteristics__table {
   border: 3px solid #2b2b2b;
+}
+
+body.dark .production_title {
+  color: #fff;
 }
 
 body.light .menu .main_menu h2 {
@@ -96,6 +101,10 @@ body.main .main_menu h2 {
 
 body.main section {
   padding: 5vh;
+}
+
+body.production section.main {
+  height: 100vh;
 }
 
 body.production .main .main_menu h2 {
@@ -242,7 +251,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 section {
-  height: 100vh;
+  min-height: 100vh;
   padding: 11vh 0;
 }
 
@@ -259,6 +268,7 @@ section.menu {
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
   height: auto;
+  min-height: auto;
   margin-top: 32px;
   z-index: 100;
   padding: 80px 10px 0 !important;
@@ -1334,6 +1344,14 @@ h2.off, p.off {
   margin-top: 50px;
 }
 
+.production_block.audio {
+  margin-top: 30px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 0;
+}
+
 .production_block .main_menu {
   width: 33%;
   max-width: 200px;
@@ -1402,6 +1420,54 @@ h2.off, p.off {
   color: #fff;
 }
 
+.production_block.audio .product_menu {
+  max-width: none;
+  width: 48%;
+  text-align: left;
+  margin: 0 0 25px;
+}
+
+.production_block.audio .product_menu img {
+  height: 175px;
+  width: 175px;
+  padding: 5px;
+  background-color: #fff;
+  float: left;
+  margin-right: 30px;
+}
+
+.production_block.audio .product_menu h2 {
+  display: inline-block;
+}
+
+.production_block.audio .product_menu p {
+  font-size: 1.2em;
+  padding-right: 10px;
+}
+
+.production_block.audio .product_menu p span {
+  font-weight: bold;
+}
+
+.production_block.audio .product_menu:hover::before {
+  width: 185px;
+  height: 185px;
+}
+
+.production_block.audio .product_menu:hover::after {
+  left: 35px;
+  top: 75px;
+  -webkit-transform: none;
+          transform: none;
+}
+
+.production_title {
+  font-size: 20px;
+  margin-bottom: 20px;
+  text-align: justify;
+  line-height: 1.3em;
+}
+
 .product-block {
   font-family: 'DIN Pro Regular';
 }
@@ -1457,6 +1523,9 @@ h2.off, p.off {
   content: "";
   position: absolute;
   left: 0px;
+  top: 50%;
+  -webkit-transform: translate(0, -50%);
+          transform: translate(0, -50%);
   width: 21px;
   height: 21px;
   background-image: url("../img/production/li.png");
@@ -1506,12 +1575,22 @@ h2.off, p.off {
 
 .product-block .product-block__info .info-block__text-block .info-block__text-item.characteristics .characteristics__table {
   border-collapse: collapse;
+  width: 100%;
+  margin-bottom: 50px;
+}
+
+.product-block .product-block__info .info-block__text-block .info-block__text-item.characteristics .characteristics__table caption {
+  font-size: 1.5em;
+}
+
+.product-block .product-block__info .info-block__text-block .info-block__text-item.characteristics .characteristics__table tr {
+  display: table-row;
 }
 
 .product-block .product-block__info .info-block__text-block .info-block__text-item.characteristics .characteristics__table tr th, .product-block .product-block__info .info-block__text-block .info-block__text-item.characteristics .characteristics__table tr td {
   width: 50%;
   text-align: left;
-  padding: 5px 0;
+  padding: 5px 10px;
   border: 2px solid #fff;
 }
 
@@ -1554,6 +1633,14 @@ h2.off, p.off {
   top: 25px;
   padding: 5px 10px;
   font-size: 0.7em;
+}
+
+.product-block.audio .img-block__slider img {
+  background: #fff;
+}
+
+.product-block.audio .product-block__img span {
+  font-weight: bold;
 }
 
 @media (min-width: 769px) {
@@ -1887,6 +1974,28 @@ h2.off, p.off {
   }
   .production_block .product_menu:hover::after, .production_block .product_menu:hover::before {
     display: none;
+  }
+  .production_block.audio .production_title {
+    font-size: 12px;
+    -webkit-box-ordinal-group: 101;
+        -ms-flex-order: 100;
+            order: 100;
+  }
+  .production_block.audio .product_menu {
+    width: 100%;
+    text-align: left;
+    margin: 0 0 25px;
+  }
+  .production_block.audio .product_menu img {
+    height: 140px;
+    width: 140px;
+    margin-right: 5px;
+  }
+  .production_block.audio .product_menu h2 {
+    font-size: 1.3em;
+  }
+  .production_block.audio .product_menu p {
+    font-size: 1em;
   }
   .product-block .product-block__img, .product-block .product-block__similar-item, .product-block .product-block__title, .product-block .product-block__info {
     float: none;
