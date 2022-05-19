@@ -930,7 +930,7 @@ h2.off,p.off{display: none;}
   padding-bottom: 50px;
   margin-top: 50px;
 
-  &.audio{
+  &.herizontal{
     margin-top: 30px;
     justify-content: space-between;
     padding: 0;
@@ -993,7 +993,7 @@ h2.off,p.off{display: none;}
       }
     }
   }
-  &.audio .product_menu{
+  &.herizontal .product_menu{
     max-width: none;
     width: 48%;
     text-align: left;
@@ -1034,6 +1034,10 @@ h2.off,p.off{display: none;}
   margin-bottom: 20px;
   text-align: justify;
   line-height: 1.3em;
+  & span{
+    color: #A92C34;
+    font-weight: bold;
+  }
 }
 .product-block {
   font-family: 'DIN Pro Regular';
@@ -1119,6 +1123,73 @@ h2.off,p.off{display: none;}
           font-size: 1.2em;
           line-height: 1.2em;
           text-align: justify;
+          & .description-block{
+            & .description-block__item{
+              & .description-block__title{
+                display: block;
+                width: 100%;
+                background: linear-gradient(0deg, #333333 0%, rgba(0, 0, 0, 0.95) 100%);
+                border-radius: 5px;
+                padding: 10px 0;
+                padding-left: 20px;
+                font-weight: bold;
+                margin-top: 10px;
+                position: relative;
+                color: #fff;
+                &::after{
+                  position: absolute;
+                  content: "Подробнее";
+                  width: 100px;
+                  height: 10px;
+                  top: 10px;
+                  right: 10px;
+                  font-weight: normal;
+                  text-transform: uppercase;
+                }
+                &::before{
+                  position: absolute;
+                  content: "";
+                  width: 112px;
+                  background: linear-gradient(-120deg, #D23643, #712324);
+                  top: 4px;
+                  bottom: 4px;
+                  right: 5px;
+                  border-radius: 5px;
+                }
+                &.link::after{
+                  content: "Скачать";
+                  width: 85px;
+                }
+                &~div{
+                  height: 0;
+                  overflow: hidden;
+                }
+                &.open~div{
+                  height: auto;
+                  margin-top: 10px;
+                }
+              }
+              & .blueprints img{
+                &:nth-child(1){
+                  height: 410px;
+                  float: left;
+                }
+                &:nth-child(2){
+                  height: 410px;
+                  float: right;
+                }
+                &:nth-child(3){
+                  width: 100%;
+                  margin-top: 20px;
+                }
+              }
+              & .certificates img{
+                display: block;
+                width: 80%;
+                margin: 0 auto;
+              }
+            }
+          }
         }
         &.characteristics {
           .characteristics__table {
@@ -1179,7 +1250,7 @@ h2.off,p.off{display: none;}
       }
     }
   }
-  &.audio{
+  &.herizontal{
     .img-block__slider img{background: #fff;}
     .product-block__img span{font-weight: bold;}
   }
@@ -1454,7 +1525,7 @@ h2.off,p.off{display: none;}
         &::after,&::before{display: none;}
       }
     }
-    &.audio{
+    &.herizontal{
       & .production_title{
         font-size: 12px;
         order: 100;

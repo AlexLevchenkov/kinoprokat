@@ -144,6 +144,14 @@ $(document).ready(function(){
       }
     }
   })
+  $(".description-block__title").click(function() {
+    if ($(this).hasClass("open")) {
+      $(this).removeClass("open")
+    }else{
+      $(this).addClass("open")
+    }
+  })
+
 
   //Переключатель версий ccs для оборудования
   $(".controler button").click(function() {
