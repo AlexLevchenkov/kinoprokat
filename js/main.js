@@ -96,7 +96,6 @@ $(document).ready(function(){
     });
   }
   // Сокрытие хедера на мольной версии
-
   if (wind_width<700) {
     let lastScroll = 0;
     const defaultOffset = 50;
@@ -152,8 +151,22 @@ $(document).ready(function(){
     }
   })
 
+  // Переключение залов в проектах
+  $(".list-halls button").click(function() {
+    let id = $(this).attr("id")
+    if (!$(this).hasClass("open")) {
+      $(".list-halls button").removeClass("open")
+      $(".hall").removeClass("open")
+      $(this).addClass("open")
+      $(".hall").each(function() {
+        if ($(this).hasClass(id)) {
+          $(this).addClass("open")
+        }
+      })
+    }
+  })
 
-  //Переключатель версий ccs для оборудования
+  // Переключатель версий ccs для оборудования
   $(".controler button").click(function() {
     let version = $(this).attr("id")
     $("body").removeClass("v_2").removeClass("v_3")
