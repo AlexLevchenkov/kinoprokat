@@ -1073,15 +1073,19 @@ h2.off, p.off {
   width: 42%;
   float: left;
   margin-right: 2%;
-  background: var(--background-red);
   color: #fff;
-  padding: 10px;
 }
 
 .project .project_main .left p {
+  background: var(--background-red);
+  padding: 10px;
   font-size: 20px;
   text-align: justify;
   line-height: 1.3em;
+}
+
+.project .project_main .left button {
+  display: none;
 }
 
 .project .project_main .right {
@@ -2106,6 +2110,78 @@ h2.off, p.off {
   }
   .projects > .news_projects_block .project_name a {
     font-size: 16px;
+  }
+  .project .project_main {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .project .project_main .img_block {
+    position: relative;
+    margin-bottom: 20px;
+  }
+  .project .project_main .img_block .main_img {
+    width: 90%;
+  }
+  .project .project_main .img_block .main_img img {
+    width: 100%;
+  }
+  .project .project_main .img_block::after, .project .project_main .img_block::before {
+    width: 10%;
+  }
+  .project .project_main .left, .project .project_main .right {
+    width: 100%;
+    float: none;
+  }
+  .project .project_main .left p {
+    background: transparent;
+    font-size: 14px;
+    line-height: 1em;
+    display: none;
+  }
+  .project .project_main .left p.open {
+    display: block;
+  }
+  .project .project_main .left button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background: var(--background-dark);
+    font-size: 1.3em;
+    text-align: left;
+    color: #fff;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    position: relative;
+  }
+  .project .project_main .left button::after {
+    position: absolute;
+    content: "";
+    background-image: url(../img/production/li_after.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 14px;
+    height: 10px;
+    top: 15px;
+    right: 10px;
+  }
+  .project .project_main .left button::before {
+    position: absolute;
+    content: "";
+    height: 100%;
+    width: 30px;
+    background: var(--background-red);
+    top: 0;
+    right: 0;
+    border-radius: 0px 5px 5px 0;
+  }
+  .project .project_main .left button.selected {
+    background: var(--background-dark);
+  }
+  .project .project_main .left button.open::after {
+    background-image: url(../img/production/li_after_open.png);
   }
   .production_block .product_menu {
     width: 40%;

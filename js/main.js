@@ -166,6 +166,16 @@ $(document).ready(function(){
     }
   })
 
+  $(".left .description").click(function(){
+    if (!$(this).hasClass("open")) {
+      $(this).addClass("open")
+      $(this).next().addClass("open")
+    }else{
+      $(this).removeClass("open")
+      $(this).next().removeClass("open")
+    }
+  })
+
   // Переключатель версий ccs для оборудования
   $(".controler button").click(function() {
     let version = $(this).attr("id")

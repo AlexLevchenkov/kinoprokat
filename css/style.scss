@@ -731,14 +731,15 @@ h2.off,p.off{display: none;}
       width: 42%;
       float: left;
       margin-right: 2%;
-      background: var(--background-red);
       color: #fff;
-      padding: 10px;
       p{
+        background: var(--background-red);
+        padding: 10px;
         font-size: 20px;
         text-align: justify;
         line-height: 1.3em;
       }
+      button{display: none;}
     }
     .right{
       width: 56%;
@@ -1570,6 +1571,77 @@ h2.off,p.off{display: none;}
       & .news_projects_block_img {height: 155px;}
       & .project_name{margin: 5px 90px 0 10px;}
       & .project_name a{font-size: 16px;}
+    }
+  }
+  .project{
+    .project_main{
+      display: flex;
+      flex-wrap: wrap;
+      .img_block{
+        position: relative;
+        margin-bottom: 20px;
+        .main_img{
+          width: 90%;
+          img{
+            width: 100%;
+          }
+        }
+        &::after,&::before{
+          width: 10%;
+        }
+      }
+      .left,.right{
+        width: 100%;
+        float: none;
+      }
+      .left {
+        p{
+          background: transparent;
+          font-size: 14px;
+          line-height: 1em;
+          display: none;
+          &.open{display: block;}
+        }
+        button{
+          display: block;
+          width: 100%;
+          padding: 10px;
+          background: var(--background-dark);
+          font-size: 1.3em;
+          text-align: left;
+          color: #fff;
+          margin-bottom: 10px;
+          border-radius: 10px;
+          position: relative;
+          &::after{
+            position: absolute;
+            content: "";
+            background-image: url(../img/production/li_after.png);
+            background-repeat: no-repeat;
+            background-size: cover;
+            width: 14px;
+            height: 10px;
+            top: 15px;
+            right: 10px;
+          }
+          &::before{
+            position: absolute;
+            content: "";
+            height: 100%;
+            width: 30px;
+            background: var(--background-red);
+            top: 0;
+            right: 0;
+            border-radius: 0px 5px 5px 0;
+          }
+          &.selected{
+            background: var(--background-dark);
+          }
+          &.open::after{
+            background-image: url(../img/production/li_after_open.png);
+          }
+        }
+      }
     }
   }
   .production_block{
