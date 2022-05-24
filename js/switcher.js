@@ -64,7 +64,7 @@ $(document).ready(function(){
     })
   } else {
     $(".language_option").click(function(){
-      if ($(".language").hasClass("open")) {
+      if ($('body').hasClass("main")) {
         let leng = $(this).attr("id")
         let title = $(".name")
         $.each(title, function(i, value){
@@ -73,9 +73,20 @@ $(document).ready(function(){
         })
         $(".language_option").removeClass("selected")
         $(this).addClass("selected")
-        $(".language").removeClass("open")
       }else{
-        $(".language").addClass("open")
+        if ($(".language").hasClass("open")) {
+          let leng = $(this).attr("id")
+          let title = $(".name")
+          $.each(title, function(i, value){
+            $(value).addClass("off")
+            $(title).filter(`#${leng}`).removeClass("off")
+          })
+          $(".language_option").removeClass("selected")
+          $(this).addClass("selected")
+          $(".language").removeClass("open")
+        }else{
+          $(".language").addClass("open")
+        }
       }
     })
   }

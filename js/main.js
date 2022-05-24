@@ -26,7 +26,7 @@ $(document).ready(function(){
 
   //Таблица
 
-  // Открытие под-таблцы 
+  // Открытие под-таблицы 
   $(".sub-table-opener").click(function() {
     if (!$(this).parent().hasClass("open")) {
       $(this).parent().addClass("open")
@@ -174,12 +174,5 @@ $(document).ready(function(){
       $(this).removeClass("open")
       $(this).next().removeClass("open")
     }
-  })
-
-  // Переключатель версий ccs для оборудования
-  $(".controler button").click(function() {
-    let version = $(this).attr("id")
-    $("body").removeClass("v_2").removeClass("v_3")
-    $("body").addClass(version)
   })
 });
