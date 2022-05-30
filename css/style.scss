@@ -29,6 +29,7 @@ body{
     & .characteristics__table{border: 3px solid #2b2b2b;}
     & .production_title{color: #fff;}
     & section.menu > .container .main_menu.menu__select h2 {color: #d53543;}
+    & .news-block__text-block{color: #fff;}
   }
   &.light{
     & .menu .main_menu h2{color: #000;}
@@ -48,6 +49,7 @@ body{
       gap: 70px;
       padding: 10px;
       padding-top: 50px;
+      height: 100%;
     }
     &.vertical section .container{
       display: grid;
@@ -56,13 +58,14 @@ body{
         "A B"
         "C D"
         "E F";
-        gap: 10px;
+      gap: 10px;
+      height: 100%;
     }
     & .main_menu h2{color: #fff;}
     & section{padding: 5vh;}
   }
   &.production{
-    section.main{height: 100vh;}
+    section.main{height: 100vh; padding: 11vh 0;}
     & .main .main_menu h2{color: #fff;}
     &.horizontal section.main .container {
       grid-template-columns: repeat(4, 1fr);
@@ -91,6 +94,7 @@ body{
     background: linear-gradient(to top, #ffff00 50%, #0000ff 50%);
     border-radius: 9em;
   }
+  &.news__block{& .container{height: 100%;}}
 }
 .mobile_menu{
   display: none;
@@ -168,7 +172,7 @@ body{
   list-style-type: none;
   font-size: 25px;
 }
-section{height: 100vh; padding:11vh 0;}
+section{height: 100vh; padding-top:11vh;}
 section>.container a{width: 100%;height: 90%;border-radius: 35px;}
 section.menu{
   position: fixed;
@@ -206,7 +210,7 @@ section.menu{
   }
 }
 button{border: none;outline: none;}
-.container{max-width: 1200px;margin: 0 auto;height: 100%;}
+.container{max-width: 1200px;margin: 0 auto;/*height: 100%;*/}
 object{max-width: 200px;}
 .fil2 {fill:#FEFEFE}
 .fil1 {fill:#A12B33}
@@ -1350,6 +1354,43 @@ h2.off,p.off{display: none;}
     }
   }
 }
+.news-block{
+  position: relative;
+  .news-block{
+    &__img {
+      width: 20%;
+      float: left;
+      background: var(--background-red);
+      height: 100%;
+      position: fixed;
+      & img{
+        width: 100%;
+        padding: 15px;
+        padding-bottom: 0;
+      }
+      & .slider__nav-left, & .slider__nav-right{display: none;}
+    }
+    &__text-block {
+      width: 65%;
+      float: right;
+    }
+    &__title h1{
+      font-size: 36px;
+      margin-bottom: 20px;
+    }
+    &__text {
+      & p{
+        margin-bottom: 15px;
+        font-size: 20px;
+        text-align: justify;
+      }
+      & h3{
+        font-size: 25px;
+        margin-bottom: 20px;
+      }
+    }
+  }
+}
 @media(min-width: 769px){
   .v_3{
     .section_name {
@@ -1399,6 +1440,7 @@ h2.off,p.off{display: none;}
     display: flex;
     align-items: center;
     padding-left: 20px;
+    height: 100%;
     & ul{
       display: block;
       padding-top: 15px;
@@ -1438,7 +1480,7 @@ h2.off,p.off{display: none;}
   body.production section.menu{top: 50px;}
   body.production section.main{padding-top: 100px;}
   body.production.vertical section.main .container{padding-bottom: 0;}
-  body.main {& .footer{position: absolute;padding-top: 0;background: none;transform: translateY(0px);}& .header{& .logo,& .language{width: 45%;}};& section{padding: 11vh 0;}}
+  body.main {& .footer{position: absolute;padding-top: 0;background: none;transform: translateY(0px);}& .header{& .logo,& .language{width: 45%;}};& section{padding-top: 11vh;}}
   body:not(.main) .header{
     & > .container{
       & .logo_block{
@@ -1807,6 +1849,45 @@ h2.off,p.off{display: none;}
         width: auto;
       }
       &.col-5{width: 10%;}
+    }
+  }
+  .news-block{
+    .news-block{
+      &__img {
+        width: 100%;
+        float: none;
+        position: static;
+        margin-bottom: 20px;
+        display: flex;
+        overflow: hidden;
+        position: relative;
+        &>img{
+          padding: 5px 0;
+          width: 84%;
+        }
+        & .slider__nav-left, & .slider__nav-right{display: block;min-width: 8%; & img{width: 45px !important;}}
+      }
+      &__text-block {
+        width: 100%;
+        float: none;
+        padding-bottom: 10px;
+      }
+      &__title h1{
+        font-size: 20px;
+        margin-bottom: 20px;
+      }
+      &__text {
+        & p{
+          margin-bottom: 15px;
+          font-size: 15px;
+          text-align: justify;
+        }
+        & h3{
+          font-size: 18px;
+          margin-bottom: 20px;
+          text-transform: uppercase;
+        }
+      }
     }
   }
 }
