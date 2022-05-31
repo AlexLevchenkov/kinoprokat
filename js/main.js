@@ -23,9 +23,7 @@ $(document).ready(function(){
     $(".mobile_menu_block").removeClass("open")
     $("body").removeClass("mobile_menu_open")
   })
-
   //Таблица
-
   // Открытие под-таблицы 
   $(".sub-table-opener").click(function() {
     if (!$(this).parent().hasClass("open")) {
@@ -36,26 +34,22 @@ $(document).ready(function(){
       $(this).parent().next().removeClass("open")
     }
   })
-
   // Фильтр таблицы
   $("#clear").click(function () {
     clearFilterTable($(this).parents('table'));
   })
-  
   $('select.main').on('input', function () {
     filterTable($(this).parents('table'));
   });
   $('select.year').on('input', function () {
     filterYearTable($(this).parents('table'));
   });
-
   function clearFilterTable($table){
     var $filters = $table.find('th');
     var $rows = $table.find('thead~tbody>tr:not(.sub-table)');
     $filters.find('select').val("");
     $rows.each(function () {$(this).css('display', '')});
   }
-
   function filterTable($table) {
     var $filters = $table.find('th');
     var $rows = $table.find('thead~tbody>tr:not(.sub-table)');
@@ -113,7 +107,6 @@ $(document).ready(function(){
       lastScroll = scrollPosition();
     })
   }
-
   // Переключение в оборудовании
   $(".info-block__menu-item").click(function() {
     if($(window).width()>768){
@@ -150,7 +143,6 @@ $(document).ready(function(){
       $(this).addClass("open")
     }
   })
-
   // Переключение залов в проектах
   $(".list-halls button").click(function() {
     let id = $(this).attr("id")
@@ -165,7 +157,6 @@ $(document).ready(function(){
       })
     }
   })
-
   $(".left .description").click(function(){
     if (!$(this).hasClass("open")) {
       $(this).addClass("open")
@@ -175,4 +166,28 @@ $(document).ready(function(){
       $(this).next().removeClass("open")
     }
   })
+  //Новости
+  $('.news-block__name').click(function(){
+    if ($(this).hasClass('left')) {
+      $('.info__left').css('display','block')
+      $('.info__right').css('display','none')
+
+      $('.info__center .left').css('display','block')
+      $('.info__center .right').css('display','none')
+
+      $('.table__characteristics td:first-child').css('display','table-cell')
+      $('.table__characteristics td:last-child').css('display','none')
+    }
+    else{
+      $('.info__left').css('display','none')
+      $('.info__right').css('display','block')
+
+      $('.info__center .left').css('display','none')
+      $('.info__center .right').css('display','block')
+
+      $('.table__characteristics td:first-child').css('display','none')
+      $('.table__characteristics td:last-child').css('display','table-cell')
+    }
+  })
+  $('.news-block__name.left').click()
 });

@@ -1,16 +1,4 @@
 $(document).ready(function(){
-  // Включение и отключение гифки
-  // if($("body").hasClass("main")){$(".main_menu").mouseenter(function(){
-  //     let src = $(this).children().filter(i=>i==0).attr("src");
-  //     let src_gif = src.replace("png","gif")
-  //     $(this).children().filter(i=>i==0).attr("src",src_gif)
-  //   })
-  //   $(".main_menu").mouseleave(function(){
-  //     let src_gif = $(this).children().filter(i=>i==0).attr("src");
-  //     let src = src_gif.replace("gif","png")
-  //     $(this).children().filter(i=>i==0).attr("src",src)
-  //   })
-  // }
   // Смена светлого и тёмного интерфейса
   $("#switcher").click(function(){
     const mode = $("body").hasClass("light")

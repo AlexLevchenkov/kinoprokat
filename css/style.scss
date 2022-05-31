@@ -30,6 +30,7 @@ body{
     & .production_title{color: #fff;}
     & section.menu > .container .main_menu.menu__select h2 {color: #d53543;}
     & .news-block__text-block{color: #fff;}
+    & .news-block__alternative {color: #fff;}
   }
   &.light{
     & .menu .main_menu h2{color: #000;}
@@ -81,6 +82,7 @@ body{
     & section.main .container {
       display: grid;
       justify-items: center;
+      height: 100%;
     }
   }
   & .menu .main_menu h2{color: #fff;}
@@ -1391,6 +1393,98 @@ h2.off,p.off{display: none;}
     }
   }
 }
+.news-block__alternative {
+  & .news-block__text {
+    font-size: 20px;
+    text-align: justify;
+    margin-bottom: 20px;
+  }
+  & .news-block__title {
+    position: relative;
+    & .news-block__name {
+      font-size: 25px;
+      &.left {
+        margin-bottom: 15px;
+      }
+      &.right {
+        position: absolute;
+        right: 0;
+        top: 0;
+      }
+      & span{
+        color: #c11845;
+      }
+    }
+  }
+  .news-block__info {
+    background: var(--background-red);
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    font-size: 20px;
+    text-transform: uppercase;
+    padding: 20px;
+    .info__left {
+      width: 30%;
+    }
+    .info__center {
+      width: 30%;
+      margin: auto 0;
+      .mob{display: none;}
+    }
+    .info__right {
+      width: 30%;
+      margin-top: auto;
+    }
+    h3{
+      margin-top: 15px;
+    }
+    & .img__block{
+      width: 200px;
+      height: 200px;
+      position: relative;
+      margin: 0 auto;
+      background: #fff;
+      border-radius: 50%;
+      img{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        width: 150px;
+        margin-top: auto;
+      }
+    }
+  }
+  .table__characteristics {
+    margin-top: 20px;
+    table{
+      width: 100%;
+      table-layout: fixed;
+      border-collapse: collapse;
+      font-size: 20px;
+      border: #2b2b2b 2px solid;
+      tr{
+        height: 30px;
+        td{
+          padding: 0 0 0 25px;
+          width: 33%;
+          border: 1px solid #fff;
+          &:last-child{
+            text-align: right;
+            padding: 0 25px 0 0;
+          }
+        }
+        th{
+          width: 33%;
+          text-transform: uppercase;
+          border: 1px solid #fff;
+        }
+      }
+    }
+  }
+}
+
 @media(min-width: 769px){
   .v_3{
     .section_name {
@@ -1886,6 +1980,87 @@ h2.off,p.off{display: none;}
           font-size: 18px;
           margin-bottom: 20px;
           text-transform: uppercase;
+        }
+      }
+    }
+  }
+  .news-block__alternative {
+    & .news-block__text {
+      font-size: 14px;
+      margin-bottom: 20px;
+    }
+    & .news-block__title {
+      & .news-block__name {
+        font-size: 14px;
+        background: var(--background-dark);
+        border-radius: 10px;
+        padding: 10px;
+        position: relative;
+        &.right {
+          position: relative;
+          margin-bottom: 15px;
+        }
+        &::after{
+          content: "Перейти";
+          width: 65px;
+          font-size: 10px;
+          text-transform: uppercase;
+          position: absolute;
+          background: var(--background-red);
+          border-radius: 10px;
+          padding: 10px;
+          right: 5px;
+          top: 50%;
+          transform: translate(0,-50%);
+        }
+      }
+    }
+    .news-block__info {
+      text-align: center;
+      font-size: 12px;
+      padding: 10px;
+      .info__left {
+        width: 50%;
+        h3{display: none;}
+      }
+      .info__center {
+        width: 50%;
+      }
+      .info__right {
+        margin: 0;
+        width: 50%;
+        h3{display: none;}
+      }
+      h3{
+        margin-top: 15px;
+        &:first-child{margin-top: 0;}
+      }
+      & .img__block{
+        width: 100%;
+        height: 100%;
+        img{
+          width: 75%;
+        }
+      }
+    }
+    .table__characteristics {
+      margin-top: 20px;
+      padding-bottom: 20px;
+      table{
+        font-size: 14px;
+        tr{
+          height: 30px;
+          td{
+            padding: 0 5px;
+            width: 33%;
+            &:last-child{
+              padding: 0 5px;
+            }
+          }
+          th{
+            width: 33%;
+            font-weight: normal;
+          }
         }
       }
     }
