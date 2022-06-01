@@ -31,6 +31,7 @@ body{
     & section.menu > .container .main_menu.menu__select h2 {color: #d53543;}
     & .news-block__text-block{color: #fff;}
     & .news-block__alternative {color: #fff;}
+    & .contacts-block{color: #fff; & a{color: #fff;}}
   }
   &.light{
     & .menu .main_menu h2{color: #000;}
@@ -38,6 +39,7 @@ body{
     & .language_options{background-image: url(../img/v_1/language_back_light.png);}
     & .characteristics__table{border: 3px solid #d6d9d9;& th,td{border-color: #000 !important;}}
     & section.menu > .container .main_menu.menu__select h2 {color: #6b110c;}
+    & .contacts-block a{color: #000;}
   }
   &.main{
     & .header{position: absolute;}
@@ -1484,6 +1486,52 @@ h2.off,p.off{display: none;}
     }
   }
 }
+.block_name.contacts{display: none;}
+.contacts-block {
+  max-width: 1200px;
+  display: flex;
+  min-height: 100%;
+  position: fixed;
+  font-size: 24px;
+  .contacts-block__left,.contacts-block__center,.contacts-block__right{
+    width: 30%;
+    margin: 1.5%;
+  }
+  .contacts-block__left {
+    padding: 10px; 
+    background: var(--background-red);
+    min-height: 100%;
+    img{
+      width: 100%;
+    }
+  }
+  .contacts-block__center {
+    &>div{
+      margin-bottom: 20px;
+    }
+    img{
+      height: 40px;
+      margin: 10px;
+    }
+    p{
+
+    }
+    a{
+      display: block;
+    }
+  }
+  .contacts-block__right {
+    
+    p{
+      text-align: justify;
+    }
+  }
+  h2{
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+}
 
 @media(min-width: 769px){
   .v_3{
@@ -2063,6 +2111,46 @@ h2.off,p.off{display: none;}
           }
         }
       }
+    }
+  }
+  .block_name.contacts{display: block;}
+  .contacts-block {
+    display: block;
+    font-size: 24px;
+    min-height: auto;
+    width: 100%;
+    position: static;
+    .contacts-block__left,.contacts-block__center,.contacts-block__right{
+      width: auto;
+      margin: 0;
+    }
+    .contacts-block__left {
+      padding: 10px; 
+      background: var(--background-red);
+      min-height: auto;
+      margin-bottom: 10px;
+      img{
+        width: 100%;
+      }
+    }
+    .contacts-block__center {
+      &>div{
+        margin-bottom: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 14px;
+        
+      }
+      .mail a{display: contents;}
+      h2{display: none;}
+    }
+    .contacts-block__right {
+    }
+    h2{
+      font-size: 30px;
+      margin-bottom: 20px;
+      text-align: center;
     }
   }
 }

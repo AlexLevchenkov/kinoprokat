@@ -66,6 +66,14 @@ body.dark .news-block__alternative {
   color: #fff;
 }
 
+body.dark .contacts-block {
+  color: #fff;
+}
+
+body.dark .contacts-block a {
+  color: #fff;
+}
+
 body.light .menu .main_menu h2 {
   color: #000;
 }
@@ -92,6 +100,10 @@ body.light .characteristics__table th, body.light .characteristics__table td {
 
 body.light section.menu > .container .main_menu.menu__select h2 {
   color: #6b110c;
+}
+
+body.light .contacts-block a {
+  color: #000;
 }
 
 body.main .header {
@@ -2025,6 +2037,58 @@ h2.off, p.off {
   border: 1px solid #fff;
 }
 
+.block_name.contacts {
+  display: none;
+}
+
+.contacts-block {
+  max-width: 1200px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  min-height: 100%;
+  position: fixed;
+  font-size: 24px;
+}
+
+.contacts-block .contacts-block__left, .contacts-block .contacts-block__center, .contacts-block .contacts-block__right {
+  width: 30%;
+  margin: 1.5%;
+}
+
+.contacts-block .contacts-block__left {
+  padding: 10px;
+  background: var(--background-red);
+  min-height: 100%;
+}
+
+.contacts-block .contacts-block__left img {
+  width: 100%;
+}
+
+.contacts-block .contacts-block__center > div {
+  margin-bottom: 20px;
+}
+
+.contacts-block .contacts-block__center img {
+  height: 40px;
+  margin: 10px;
+}
+
+.contacts-block .contacts-block__center a {
+  display: block;
+}
+
+.contacts-block .contacts-block__right p {
+  text-align: justify;
+}
+
+.contacts-block h2 {
+  font-size: 30px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
 @media (min-width: 769px) {
   .v_3 .section_name {
     width: 100%;
@@ -2675,5 +2739,52 @@ h2.off, p.off {
   .news-block__alternative .table__characteristics table tr th {
     width: 33%;
     font-weight: normal;
+  }
+  .block_name.contacts {
+    display: block;
+  }
+  .contacts-block {
+    display: block;
+    font-size: 24px;
+    min-height: auto;
+    width: 100%;
+    position: static;
+  }
+  .contacts-block .contacts-block__left, .contacts-block .contacts-block__center, .contacts-block .contacts-block__right {
+    width: auto;
+    margin: 0;
+  }
+  .contacts-block .contacts-block__left {
+    padding: 10px;
+    background: var(--background-red);
+    min-height: auto;
+    margin-bottom: 10px;
+  }
+  .contacts-block .contacts-block__left img {
+    width: 100%;
+  }
+  .contacts-block .contacts-block__center > div {
+    margin-bottom: 20px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    font-size: 14px;
+  }
+  .contacts-block .contacts-block__center .mail a {
+    display: contents;
+  }
+  .contacts-block .contacts-block__center h2 {
+    display: none;
+  }
+  .contacts-block h2 {
+    font-size: 30px;
+    margin-bottom: 20px;
+    text-align: center;
   }
 }
