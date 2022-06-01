@@ -177,6 +177,9 @@ $(document).ready(function(){
 
       $('.table__characteristics td:first-child').css('display','table-cell')
       $('.table__characteristics td:last-child').css('display','none')
+      
+      $('.news-block__name.right').addClass('open')
+      $('.news-block__name.left').removeClass('open')
     }
     else{
       $('.info__left').css('display','none')
@@ -187,7 +190,12 @@ $(document).ready(function(){
 
       $('.table__characteristics td:first-child').css('display','none')
       $('.table__characteristics td:last-child').css('display','table-cell')
+
+      $('.news-block__name.right').removeClass('open')
+      $('.news-block__name.left').addClass('open')
     }
   })
-  $('.news-block__name.left').click()
+  if($(window).width()<768){
+    $('.news-block__name.left').click()
+  }
 });

@@ -2000,7 +2000,7 @@ h2.off,p.off{display: none;}
           position: relative;
           margin-bottom: 15px;
         }
-        &::after{
+        &.open::after{
           content: "Перейти";
           width: 65px;
           font-size: 10px;

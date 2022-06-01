@@ -2607,7 +2607,7 @@ h2.off, p.off {
     position: relative;
     margin-bottom: 15px;
   }
-  .news-block__alternative .news-block__title .news-block__name::after {
+  .news-block__alternative .news-block__title .news-block__name.open::after {
     content: "Перейти";
     width: 65px;
     font-size: 10px;
