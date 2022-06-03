@@ -135,7 +135,7 @@ body.main .main_menu h2 {
 }
 
 body.main section {
-  padding: 5vh;
+  padding: 11vh 5vh;
 }
 
 body.production section.main {
@@ -2199,7 +2199,7 @@ h2.off, p.off {
     top: 50px;
   }
   body.production section.main {
-    padding-top: 100px;
+    padding: 11vh 5vh;
   }
   body.production.vertical section.main .container {
     padding-bottom: 0;
@@ -2259,6 +2259,9 @@ h2.off, p.off {
   section.main {
     padding: 75px 20px 0;
     height: 95vh;
+  }
+  .header {
+    height: 60px;
   }
   .footer {
     position: fixed;
@@ -2660,12 +2663,23 @@ h2.off, p.off {
     font-size: 14px;
     margin-bottom: 20px;
   }
+  .news-block__alternative .news-block__title {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
   .news-block__alternative .news-block__title .news-block__name {
+    width: 100%;
     font-size: 14px;
     background: var(--background-dark);
     border-radius: 10px;
     padding: 10px;
     position: relative;
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
   }
   .news-block__alternative .news-block__title .news-block__name.right {
     position: relative;
@@ -2684,6 +2698,11 @@ h2.off, p.off {
     top: 50%;
     -webkit-transform: translate(0, -50%);
             transform: translate(0, -50%);
+  }
+  .news-block__alternative .news-block__title .news-block__name.open {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
   }
   .news-block__alternative .news-block__info {
     text-align: center;
@@ -2763,6 +2782,9 @@ h2.off, p.off {
   .contacts-block .contacts-block__left img {
     width: 100%;
   }
+  .contacts-block .contacts-block__center {
+    padding: 0 5vw;
+  }
   .contacts-block .contacts-block__center > div {
     margin-bottom: 20px;
     display: -webkit-box;
@@ -2771,10 +2793,18 @@ h2.off, p.off {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    -webkit-box-pack: left;
+        -ms-flex-pack: left;
+            justify-content: left;
     font-size: 14px;
+  }
+  .contacts-block .contacts-block__center > div:last-child img {
+    height: auto;
+    width: 35px;
+  }
+  .contacts-block .contacts-block__center > div .img__block {
+    min-width: 55px;
+    margin-right: 20px;
   }
   .contacts-block .contacts-block__center .mail a {
     display: contents;
@@ -2790,5 +2820,11 @@ h2.off, p.off {
     font-size: 30px;
     margin-bottom: 20px;
     text-align: center;
+  }
+  .slider__nav .slider__nav-right, .slider__nav .slider__nav-left {
+    min-width: 35px;
+  }
+  .slider__nav .slider__nav-right > img, .slider__nav .slider__nav-left > img {
+    width: 20px !important;
   }
 }

@@ -65,7 +65,7 @@ body{
       height: 100%;
     }
     & .main_menu h2{color: #fff;}
-    & section{padding: 5vh;}
+    & section{padding: 11vh 5vh;}
   }
   &.production{
     section.main{height: 100vh; padding: 11vh 0;}
@@ -1620,7 +1620,7 @@ h2.off,p.off{display: none;}
 }
 @media (max-width: 768px) {
   body.production section.menu{top: 50px;}
-  body.production section.main{padding-top: 100px;}
+  body.production section.main{padding: 11vh 5vh;}
   body.production.vertical section.main .container{padding-bottom: 0;}
   body.main {& .footer{position: absolute;padding-top: 0;background: none;transform: translateY(0px);}& .header{& .logo,& .language{width: 45%;}};& section{padding-top: 11vh;}}
   body:not(.main) .header{
@@ -1667,6 +1667,7 @@ h2.off,p.off{display: none;}
     }
   }
   section.main{padding: 75px 20px 0; height: 95vh;}
+  .header{height: 60px;}
   .footer{
     position: fixed;
     padding-top: 5px;
@@ -2038,12 +2039,16 @@ h2.off,p.off{display: none;}
       margin-bottom: 20px;
     }
     & .news-block__title {
+      display: flex;
+      flex-wrap: wrap;
       & .news-block__name {
+        width: 100%;
         font-size: 14px;
         background: var(--background-dark);
         border-radius: 10px;
         padding: 10px;
         position: relative;
+        order: 2;
         &.right {
           position: relative;
           margin-bottom: 15px;
@@ -2061,6 +2066,7 @@ h2.off,p.off{display: none;}
           top: 50%;
           transform: translate(0,-50%);
         }
+        &.open{order:1;}
       }
     }
     .news-block__info {
@@ -2134,14 +2140,22 @@ h2.off,p.off{display: none;}
       }
     }
     .contacts-block__center {
+      padding: 0 5vw;
       &>div{
         margin-bottom: 20px;
         display: flex;
         align-items: center;
-        justify-content: center;
+        justify-content: left;
         font-size: 14px;
-        
+        &:last-child{
+          img{
+            height: auto;
+            width: 35px;
+          }
+        }
+        .img__block{min-width: 55px;margin-right: 20px;}
       }
+      
       .mail a{display: contents;}
       h2{display: none;}
     }
@@ -2153,6 +2167,12 @@ h2.off,p.off{display: none;}
       font-size: 30px;
       margin-bottom: 20px;
       text-align: center;
+    }
+  }
+  .slider__nav{
+    & .slider__nav-right,& .slider__nav-left {
+      min-width: 35px;
+      &> img{width: 20px !important;}
     }
   }
 }
