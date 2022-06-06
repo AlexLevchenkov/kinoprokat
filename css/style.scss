@@ -78,7 +78,7 @@ body{
     &.vertical section.main .container{
       grid-template-columns: repeat(2, 1fr);
       gap: 10px;
-      height: 216%;
+      height: 200%;
       padding-bottom: 75px;
     }
     & section.main .container {
@@ -1026,8 +1026,8 @@ h2.off,p.off{display: none;}
     }
     & p{
       color: #fff;
-      font-size: 1.2em;
-      padding: 5px 0;
+      font-size: 1em;
+      padding: 5px 0 25px;
     }
     &:hover{
       &::before{
@@ -1481,6 +1481,7 @@ h2.off,p.off{display: none;}
           width: 33%;
           text-transform: uppercase;
           border: 1px solid #fff;
+          font-size: 18px;
         }
       }
     }
@@ -1509,6 +1510,7 @@ h2.off,p.off{display: none;}
     &>div{
       margin-bottom: 20px;
     }
+    .mail img{height: 37px;}
     img{
       height: 40px;
       margin: 10px;
@@ -1620,17 +1622,17 @@ h2.off,p.off{display: none;}
 }
 @media (max-width: 768px) {
   body.production section.menu{top: 50px;}
-  body.production section.main{padding: 11vh 5vh;}
+  body.production section.main{padding: 11vh 3vh;}
   body.production.vertical section.main .container{padding-bottom: 0;}
-  body.main {& .footer{position: absolute;padding-top: 0;background: none;transform: translateY(0px);}& .header{& .logo,& .language{width: 45%;}};& section{padding-top: 11vh;}}
+  body.main {& .footer{position: absolute;padding-top: 0;background: none;transform: translateY(0px);}& .header{& .logo,& .language{width: 45%;}};& section{padding: 11vh 3vh;}}
   body:not(.main) .header{
     & > .container{
       & .logo_block{
-        width: 55px;
+        width: 49px;
         overflow: hidden;
         border-radius: 15px;
         & img{
-          width: 200px;
+          width: 175px;
         }
       }
       & .language{
@@ -1666,7 +1668,7 @@ h2.off,p.off{display: none;}
       }
     }
   }
-  section.main{padding: 75px 20px 0; height: 95vh;}
+  section.main{padding: 11vh 3vh 0; height: 95vh;}
   .header{height: 60px;}
   .footer{
     position: fixed;
@@ -1842,9 +1844,10 @@ h2.off,p.off{display: none;}
     }
   }
   .production_block{
-    &.product__list{grid-template-columns:repeat(2,1fr);gap: 40px;}
+    &.product__list{grid-template-columns:repeat(2,1fr);gap: 10px;}
     & .product_menu{
       width: 100%;
+      height: 90%;
       &:hover{
         &::after,&::before{display: none;}
       }
@@ -1864,16 +1867,19 @@ h2.off,p.off{display: none;}
           margin-right: 5px;
         }
         & h2{
-          font-size: 1.3em;
+          font-size: 1.1em;
         }
         & p{
           font-size: 1em;
+          padding: 0;
         }
       }
     }
     & .main_menu{
-      width: 40%;
-      margin: 5%;
+      width: 47%;
+      margin: 5px;
+      margin-bottom: 30px;
+      &:last-child{margin: 5px;}
     }
   }
   .product-block {
@@ -2043,7 +2049,8 @@ h2.off,p.off{display: none;}
       flex-wrap: wrap;
       & .news-block__name {
         width: 100%;
-        font-size: 14px;
+        font-size: 18px;
+        font-weight: bold;
         background: var(--background-dark);
         border-radius: 10px;
         padding: 10px;
@@ -2066,7 +2073,7 @@ h2.off,p.off{display: none;}
           top: 50%;
           transform: translate(0,-50%);
         }
-        &.open{order:1;}
+        &.open{order:1; font-size: 14px;font-weight: normal;}
       }
     }
     .news-block__info {
@@ -2087,7 +2094,7 @@ h2.off,p.off{display: none;}
       }
       h3{
         margin-top: 15px;
-        &:first-child{margin-top: 0;}
+        &:first-child, &.right:first-child{margin-top: 0;}
       }
       & .img__block{
         width: 100%;
@@ -2104,6 +2111,7 @@ h2.off,p.off{display: none;}
         font-size: 14px;
         tr{
           height: 30px;
+          font-size: 14px;
           td{
             padding: 0 5px;
             width: 33%;
@@ -2114,6 +2122,8 @@ h2.off,p.off{display: none;}
           th{
             width: 33%;
             font-weight: normal;
+            font-size: 12px;
+            text-align: left;
           }
         }
       }
@@ -2175,4 +2185,7 @@ h2.off,p.off{display: none;}
       &> img{width: 20px !important;}
     }
   }
+  .news_projects .news_projects_block h2, .news_projects .news_projects_block a{font-size: 15px;}
+  .block_name{margin-top: 0;}
+  .production_menu_block .production_menu .main_menu{min-width: 23vw;width: 23vw;height: 23vw;}
 }

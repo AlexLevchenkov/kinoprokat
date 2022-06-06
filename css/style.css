@@ -159,7 +159,7 @@ body.production.vertical section.main .container {
   -ms-grid-columns: (1fr)[2];
       grid-template-columns: repeat(2, 1fr);
   gap: 10px;
-  height: 216%;
+  height: 200%;
   padding-bottom: 75px;
 }
 
@@ -1491,8 +1491,8 @@ h2.off, p.off {
 
 .production_block .product_menu p {
   color: #fff;
-  font-size: 1.2em;
-  padding: 5px 0;
+  font-size: 1em;
+  padding: 5px 0 25px;
 }
 
 .production_block .product_menu:hover::before {
@@ -2035,6 +2035,7 @@ h2.off, p.off {
   width: 33%;
   text-transform: uppercase;
   border: 1px solid #fff;
+  font-size: 18px;
 }
 
 .block_name.contacts {
@@ -2068,6 +2069,10 @@ h2.off, p.off {
 
 .contacts-block .contacts-block__center > div {
   margin-bottom: 20px;
+}
+
+.contacts-block .contacts-block__center .mail img {
+  height: 37px;
 }
 
 .contacts-block .contacts-block__center img {
@@ -2199,7 +2204,7 @@ h2.off, p.off {
     top: 50px;
   }
   body.production section.main {
-    padding: 11vh 5vh;
+    padding: 11vh 3vh;
   }
   body.production.vertical section.main .container {
     padding-bottom: 0;
@@ -2215,15 +2220,15 @@ h2.off, p.off {
     width: 45%;
   }
   body.main section {
-    padding-top: 11vh;
+    padding: 11vh 3vh;
   }
   body:not(.main) .header > .container .logo_block {
-    width: 55px;
+    width: 49px;
     overflow: hidden;
     border-radius: 15px;
   }
   body:not(.main) .header > .container .logo_block img {
-    width: 200px;
+    width: 175px;
   }
   body:not(.main) .header > .container .language .language_options {
     width: 33%;
@@ -2257,7 +2262,7 @@ h2.off, p.off {
     width: 45%;
   }
   section.main {
-    padding: 75px 20px 0;
+    padding: 11vh 3vh 0;
     height: 95vh;
   }
   .header {
@@ -2464,10 +2469,11 @@ h2.off, p.off {
   .production_block.product__list {
     -ms-grid-columns: (1fr)[2];
         grid-template-columns: repeat(2, 1fr);
-    gap: 40px;
+    gap: 10px;
   }
   .production_block .product_menu {
     width: 100%;
+    height: 90%;
   }
   .production_block .product_menu:hover::after, .production_block .product_menu:hover::before {
     display: none;
@@ -2489,14 +2495,19 @@ h2.off, p.off {
     margin-right: 5px;
   }
   .production_block.herizontal .product_menu h2 {
-    font-size: 1.3em;
+    font-size: 1.1em;
   }
   .production_block.herizontal .product_menu p {
     font-size: 1em;
+    padding: 0;
   }
   .production_block .main_menu {
-    width: 40%;
-    margin: 5%;
+    width: 47%;
+    margin: 5px;
+    margin-bottom: 30px;
+  }
+  .production_block .main_menu:last-child {
+    margin: 5px;
   }
   .product-block .product-block__img, .product-block .product-block__similar-item, .product-block .product-block__title, .product-block .product-block__info {
     float: none;
@@ -2672,7 +2683,8 @@ h2.off, p.off {
   }
   .news-block__alternative .news-block__title .news-block__name {
     width: 100%;
-    font-size: 14px;
+    font-size: 18px;
+    font-weight: bold;
     background: var(--background-dark);
     border-radius: 10px;
     padding: 10px;
@@ -2703,6 +2715,8 @@ h2.off, p.off {
     -webkit-box-ordinal-group: 2;
         -ms-flex-order: 1;
             order: 1;
+    font-size: 14px;
+    font-weight: normal;
   }
   .news-block__alternative .news-block__info {
     text-align: center;
@@ -2728,7 +2742,7 @@ h2.off, p.off {
   .news-block__alternative .news-block__info h3 {
     margin-top: 15px;
   }
-  .news-block__alternative .news-block__info h3:first-child {
+  .news-block__alternative .news-block__info h3:first-child, .news-block__alternative .news-block__info h3.right:first-child {
     margin-top: 0;
   }
   .news-block__alternative .news-block__info .img__block {
@@ -2747,6 +2761,7 @@ h2.off, p.off {
   }
   .news-block__alternative .table__characteristics table tr {
     height: 30px;
+    font-size: 14px;
   }
   .news-block__alternative .table__characteristics table tr td {
     padding: 0 5px;
@@ -2758,6 +2773,8 @@ h2.off, p.off {
   .news-block__alternative .table__characteristics table tr th {
     width: 33%;
     font-weight: normal;
+    font-size: 12px;
+    text-align: left;
   }
   .block_name.contacts {
     display: block;
@@ -2826,5 +2843,16 @@ h2.off, p.off {
   }
   .slider__nav .slider__nav-right > img, .slider__nav .slider__nav-left > img {
     width: 20px !important;
+  }
+  .news_projects .news_projects_block h2, .news_projects .news_projects_block a {
+    font-size: 15px;
+  }
+  .block_name {
+    margin-top: 0;
+  }
+  .production_menu_block .production_menu .main_menu {
+    min-width: 23vw;
+    width: 23vw;
+    height: 23vw;
   }
 }
