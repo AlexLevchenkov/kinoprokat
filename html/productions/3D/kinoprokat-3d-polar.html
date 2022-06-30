@@ -212,14 +212,101 @@
         </ul>
       </div>
       <div class="product-block__info info-block">
-        <div class="info-block__menu">
-          <button id="description" class="info-block__menu-item selected">Описание</button>
-          <button id="characteristics" class="info-block__menu-item">Характеристики</button>
-          <button id="info-manufacturer" class="info-block__menu-item">Информация от производителя</button>
-        </div>
         <div class="info-block__text-block">
-          <div class="info-block__text-item description selected">
+          <div class="info-block__text-item description selected open">
             <div class="description-block">
+              <div class="description-block__item">
+                <div class="description-block__title">Характеристики</div>
+                <table class="characteristics__table">
+                  <tbody>
+                      <tr>
+                          <th data-bind="text: specName">Активная поверхность</th>
+                          <td data-bind="html: specValue">220 × 120 мм</td>
+                      </tr>
+                      <tr>
+                          <th data-bind="text: specName">Тип поляризации</th>
+                          <td data-bind="html: specValue">круговая</td>
+                      </tr>
+                      <tr>
+                          <th data-bind="text: specName">Напряжение питания</th>
+                          <td data-bind="html: specValue">110-240 V AC 50-60 Гц</td>
+                      </tr>
+                      <tr>
+                          <th data-bind="text: specName">Оптимальая температура рабочей среды</th>
+                          <td data-bind="html: specValue">+19 °C</td>
+                      </tr>
+                      <tr>
+                          <th data-bind="text: specName">Рабочая температура поляризционного модуля</th>
+                          <td data-bind="html: specValue">от +10 до +60 °C</td>
+                      </tr>
+                      <tr>
+                          <th data-bind="text: specName">Рабочая температура контроллера</th>
+                          <td data-bind="html: specValue">от +10 до +40 °C</td>
+                      </tr>
+                      <tr>
+                          <th data-bind="text: specName">Максимальная кратность объектива</th>
+                          <td data-bind="html: specValue">0,90:1</td>
+                      </tr>
+                      <tr>
+                          <th data-bind="text: specName">Контрастность</th>
+                          <td data-bind="html: specValue">>100:1</td>
+                      </tr>
+                      <tr>
+                          <th data-bind="text: specName">Световая эффективность</th>
+                          <td data-bind="html: specValue">18%</td>
+                      </tr>
+                      <tr>
+                          <th data-bind="text: specName">Совместимость с HFR</th>
+                          <td data-bind="html: specValue">да</td>
+                      </tr>
+                      <tr>
+                          <th data-bind="text: specName">Поддержка NOC</th>
+                          <td data-bind="html: specValue">да</td>
+                      </tr>
+                      <tr>
+                          <th data-bind="text: specName">Максимальная мощность лампы</th>
+                          <td data-bind="html: specValue">6,5 кВт</td>
+                      </tr>
+                      <tr>
+                          <th data-bind="text: specName"></th>
+                          <td data-bind="html: specValue"></td>
+                      </tr>
+                      <tr>
+                          <th data-bind="text: specName">Температура хранения / транспортировки</th>
+                          <td data-bind="html: specValue">от -0 °C до +50 °C</td>
+                      </tr>
+                      <tr>
+                          <th data-bind="text: specName">Вес нетто</th>
+                          <td data-bind="html: specValue">8,3 кг</td>
+                      </tr>
+                      <tr>
+                          <th data-bind="text: specName">Вес брутто</th>
+                          <td data-bind="html: specValue">10,4 кг</td>
+                      </tr>
+                      <tr>
+                          <th data-bind="text: specName">Транспортировочные габариты (ДхШхВ)</th>
+                          <td data-bind="html: specValue">740 х 370 х 150 мм</td>
+                      </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="description-block__item">
+                <div class="description-block__title">Комлектующие</div>
+                <div class="accessories">
+                  <img src="../../../img/production/3d/accessories.jpg" alt="">
+                  <ol class="list" type="1">
+                    <li>Актуатор</li>
+                    <li>Поляризационный модуль</li>
+                    <li>Контроллер</li>
+                    <li>Крепежные елементы </li>
+                    <li>Кабель синхронизации</li>
+                    <li>Кабель Ethernet</li>
+                    <li>Кабель питания 100-240V</li>
+                    <li>Запасной воздушный фильтр</li>
+                    <li>Набор шестигранных ключей</li>
+                  </ol>
+                </div>
+              </div>
               <div class="description-block__item">
                 <div class="description-block__title">Чертежи</div>
                 <div class="blueprints">
@@ -239,88 +326,12 @@
               </div>
             </div>
           </div>
-          <div class="info-block__text-item characteristics">
-            <table class="characteristics__table">
-              <tbody>
-                  <tr>
-                      <th data-bind="text: specName">Активная поверхность</th>
-                      <td data-bind="html: specValue">220 × 120 мм</td>
-                  </tr>
-                  <tr>
-                      <th data-bind="text: specName">Тип поляризации</th>
-                      <td data-bind="html: specValue">круговая</td>
-                  </tr>
-                  <tr>
-                      <th data-bind="text: specName">Напряжение питания</th>
-                      <td data-bind="html: specValue">110-240 V AC 50-60 Гц</td>
-                  </tr>
-                  <tr>
-                      <th data-bind="text: specName">Оптимальая температура рабочей среды</th>
-                      <td data-bind="html: specValue">+19 °C</td>
-                  </tr>
-                  <tr>
-                      <th data-bind="text: specName">Рабочая температура поляризционного модуля</th>
-                      <td data-bind="html: specValue">от +10 до +60 °C</td>
-                  </tr>
-                  <tr>
-                      <th data-bind="text: specName">Рабочая температура контроллера</th>
-                      <td data-bind="html: specValue">от +10 до +40 °C</td>
-                  </tr>
-                  <tr>
-                      <th data-bind="text: specName">Максимальная кратность объектива</th>
-                      <td data-bind="html: specValue">0,90:1</td>
-                  </tr>
-                  <tr>
-                      <th data-bind="text: specName">Контрастность</th>
-                      <td data-bind="html: specValue">>100:1</td>
-                  </tr>
-                  <tr>
-                      <th data-bind="text: specName">Световая эффективность</th>
-                      <td data-bind="html: specValue">18%</td>
-                  </tr>
-                  <tr>
-                      <th data-bind="text: specName">Совместимость с HFR</th>
-                      <td data-bind="html: specValue">да</td>
-                  </tr>
-                  <tr>
-                      <th data-bind="text: specName">Поддержка NOC</th>
-                      <td data-bind="html: specValue">да</td>
-                  </tr>
-                  <tr>
-                      <th data-bind="text: specName">Максимальная мощность лампы</th>
-                      <td data-bind="html: specValue">6,5 кВт</td>
-                  </tr>
-                  <tr>
-                      <th data-bind="text: specName"></th>
-                      <td data-bind="html: specValue"></td>
-                  </tr>
-                  <tr>
-                      <th data-bind="text: specName">Температура хранения / транспортировки</th>
-                      <td data-bind="html: specValue">от -0 °C до +50 °C</td>
-                  </tr>
-                  <tr>
-                      <th data-bind="text: specName">Вес нетто</th>
-                      <td data-bind="html: specValue">8,3 кг</td>
-                  </tr>
-                  <tr>
-                      <th data-bind="text: specName">Вес брутто</th>
-                      <td data-bind="html: specValue">10,4 кг</td>
-                  </tr>
-                  <tr>
-                      <th data-bind="text: specName">Транспортировочные габариты (ДхШхВ)</th>
-                      <td data-bind="html: specValue">740 х 370 х 150 мм</td>
-                  </tr>
-              </tbody>
-            </table>
-          </div>
-          <div class="info-block__text-item info-manufacturer">
-            ...
-          </div>
+
         </div>
       </div>
       <div class="product-block__similar-item similar-item-block">
         <div class="similar-item-block__title">Похожие товары</div>
-        <div class="similar-item-block__product production_block">
+        <div class="similar-item-block__product production_block production_block-hovizontal">
           <a class="product_menu" href="#">
             <img src="../../../img/production/3D.jpg" alt="3d-polar image">
             <h2>KINOPROKAT <br> 3d-POLAR cp.v4 PRO</h2>
