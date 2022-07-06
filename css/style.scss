@@ -2066,7 +2066,7 @@ h2.off,p.off{display: none;}
     & .product_menu{
       width: 100% !important;
       height: 90%;
-      &:hover{
+      &:hover .img__block{
         &::after,&::before{display: none;}
       }
       h2{font-size: 1.2em;}

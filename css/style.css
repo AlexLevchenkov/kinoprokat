@@ -2753,7 +2753,7 @@ h2.off, p.off {
     width: 100% !important;
     height: 90%;
   }
-  .production_block .product_menu:hover::after, .production_block .product_menu:hover::before {
+  .production_block .product_menu:hover .img__block::after, .production_block .product_menu:hover .img__block::before {
     display: none;
   }
   .production_block .product_menu h2 {
