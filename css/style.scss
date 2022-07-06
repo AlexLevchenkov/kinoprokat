@@ -1146,6 +1146,7 @@ h2.off,p.off{display: none;}
       color: #fff;
       font-size: 1em;
       padding: 5px 0;
+      word-wrap:break-word;
       & span{
         font-weight: bold;
       }
@@ -1208,7 +1209,6 @@ h2.off,p.off{display: none;}
     gap: 20px;
   }
   &.audio_processors .product_menu{
-    min-height: 245px;
     &:hover{
       &::before{
         height: 68%;
@@ -2069,6 +2069,7 @@ h2.off,p.off{display: none;}
       &:hover{
         &::after,&::before{display: none;}
       }
+      h2{font-size: 1.2em;}
     }
     &.herizontal{
       & .production_title{
@@ -2298,6 +2299,11 @@ h2.off,p.off{display: none;}
     }
   }
   .production_title.lamps img{width: 100%;}
+  .production_title.screen{
+    .img_block,p{
+      width: 100%;
+    }
+  }
   .table{
     font-size: 12px;
     & > tbody tr.sub-table.open > td{

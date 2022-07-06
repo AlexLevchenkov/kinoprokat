@@ -1637,6 +1637,7 @@ h2.off, p.off {
   color: #fff;
   font-size: 1em;
   padding: 5px 0;
+  word-wrap: break-word;
 }
 
 .production_block .product_menu p span {
@@ -1712,10 +1713,6 @@ h2.off, p.off {
       -ms-flex-pack: center;
           justify-content: center;
   gap: 20px;
-}
-
-.production_block.audio_processors .product_menu {
-  min-height: 245px;
 }
 
 .production_block.audio_processors .product_menu:hover::before {
@@ -2759,6 +2756,9 @@ h2.off, p.off {
   .production_block .product_menu:hover::after, .production_block .product_menu:hover::before {
     display: none;
   }
+  .production_block .product_menu h2 {
+    font-size: 1.2em;
+  }
   .production_block.herizontal .production_title {
     font-size: 12px;
     -webkit-box-ordinal-group: 101;
@@ -2985,6 +2985,9 @@ h2.off, p.off {
     background: var(--background-dark);
   }
   .production_title.lamps img {
+    width: 100%;
+  }
+  .production_title.screen .img_block, .production_title.screen p {
     width: 100%;
   }
   .table {
