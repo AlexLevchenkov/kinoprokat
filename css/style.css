@@ -1877,6 +1877,10 @@ h2.off, p.off {
   border-radius: 5px;
 }
 
+.product-block .product-block__info .info-block__text-block .info-block__menu-item.mobile {
+  display: none;
+}
+
 .product-block .product-block__info .info-block__text-block .info-block__text-item {
   height: 0;
   -webkit-transition: height 0.5s;
@@ -2872,6 +2876,7 @@ h2.off, p.off {
     background: transparent;
   }
   .product-block .product-block__info .info-block__menu .info-block__menu-item {
+    display: none;
     width: 100%;
     background: var(--background-dark);
     border-radius: 5px;
@@ -2932,6 +2937,52 @@ h2.off, p.off {
   }
   .product-block .similar-item-block .similar-item-block__product.production_block .product_menu p {
     font-size: 0.7em  !important;
+  }
+  .product-block .info-block__text-block .info-block__menu-item.mobile {
+    display: block !important;
+    width: 100%;
+    background: var(--background-dark);
+    margin: 7px;
+    padding: 10px 0;
+    border-radius: 5px;
+    position: relative;
+    margin-bottom: 5px;
+    text-align-last: left;
+    padding-left: 10px;
+    color: #fff;
+  }
+  .product-block .info-block__text-block .info-block__menu-item.mobile::after {
+    position: absolute;
+    content: "";
+    background-image: url(../img/production/li_after.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 14px;
+    height: 10px;
+    top: 15px;
+    right: 18px;
+  }
+  .product-block .info-block__text-block .info-block__menu-item.mobile::before {
+    position: absolute;
+    content: "";
+    width: 40px;
+    background: var(--background-red);
+    top: 4px;
+    bottom: 4px;
+    right: 5px;
+    border-radius: 5px;
+  }
+  .product-block .info-block__text-block .info-block__menu-item.mobile.selected {
+    background: var(--background-dark);
+  }
+  .product-block .info-block__text-block .info-block__menu-item.mobile.open {
+    background: var(--background-red);
+  }
+  .product-block .info-block__text-block .info-block__menu-item.mobile.open::after {
+    background-image: url(../img/production/li_after_open.png);
+  }
+  .product-block .info-block__text-block .info-block__menu-item.mobile.open::before {
+    background: var(--background-dark);
   }
   .production_title.lamps img {
     width: 100%;
