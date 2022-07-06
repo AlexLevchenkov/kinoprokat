@@ -1082,7 +1082,9 @@ h2.off,p.off{display: none;}
         background: var(--background-red);
       }
       & img{
-        height: 75px;
+        height: 70px;
+        width: auto;
+        max-width: none;
       }
       & h2{
         font-size: 0.8em !important;
@@ -1388,13 +1390,19 @@ h2.off,p.off{display: none;}
               &~*{
                 display: none;
               }
-              &.open~div{
-                display: block;
-                margin-top: 10px;
-              }
-              &.open~table{
-                display: table;
-                margin-top: 10px;
+              &.open{
+                background: var(--background-red);
+                &::before{
+                  background: var(--background-dark);
+                }
+                &~div{
+                  display: block;
+                  margin-top: 10px;
+                }
+                &~table{
+                  display: table;
+                  margin-top: 10px;
+                }
               }
             }
             & .blueprints img{
