@@ -137,10 +137,12 @@ $(document).ready(function(){
     }
   })
   $(".description-block__title").click(function() {
-    if ($(this).hasClass("open")) {
-      $(this).removeClass("open")
-    }else{
-      $(this).addClass("open")
+    if (!$(this).hasClass("link")) {
+      if ($(this).hasClass("open")) {
+        $(this).removeClass("open")
+      }else{
+        $(this).addClass("open")
+      }
     }
   })
   // Переключение залов в проектах

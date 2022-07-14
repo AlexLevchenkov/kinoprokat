@@ -84,6 +84,7 @@ body{
         }
       }
     }
+    & .similar-item-block__title{background: var(--background-dark);}
   }
   &.light{
     & .menu .main_menu h2{color: #000;}
@@ -124,6 +125,7 @@ body{
         }
       }
     }
+    & .similar-item-block__title{background: var(--background-light);}
   }
   &.main{
     & .header{position: absolute;}
@@ -1107,6 +1109,11 @@ h2.off,p.off{display: none;}
     grid-template-columns:repeat(4,1fr);
     justify-content: space-between;
     gap: 20px;
+    &-three{
+      grid-template-columns:repeat(3,1fr);
+      width: 75%;
+      margin: 0 auto;
+    }
   }
   &.herizontal{
     justify-content: space-between;
@@ -1177,7 +1184,7 @@ h2.off,p.off{display: none;}
   }
   &.herizontal .product_menu{
     max-width: none;
-    width: 48%;
+    width: 48% !important;
     text-align: left;
     margin: 0 0 25px;
     & .img__block{
@@ -1435,10 +1442,11 @@ h2.off,p.off{display: none;}
                 display: grid;
                 grid-template-columns: repeat(2,1fr);
                 li{
-                  margin-left: 20px;
+                  margin-left: 25px;
                 }
               }
             }
+            & .characteristics__table{margin-bottom: 10px;}
           }
         }
         &.selected{
@@ -1462,6 +1470,13 @@ h2.off,p.off{display: none;}
           border: 2px solid #fff;
         }
       }
+      &-four-column{
+        tr{
+          th,td{
+            width: 25%;
+          }
+        }
+      }
     }
   }
   .product-block__similar-item {
@@ -1470,6 +1485,8 @@ h2.off,p.off{display: none;}
       font-size: 1.5em;
       text-align: center;
       text-transform: uppercase;
+      padding: 7px 0px;
+      border-radius: 10px;
     }
     & .similar-item-block__product {
       margin-top: 15px;
@@ -1491,7 +1508,7 @@ h2.off,p.off{display: none;}
           }
         }
         &.production_block-hovizontal>.product_menu{
-          width: 48%;
+          width: 48% !important;
           margin: 1%;
           text-align: left;
           img{
@@ -1502,7 +1519,7 @@ h2.off,p.off{display: none;}
           h2{
             float: left;
             font-size: 0.7em;
-            min-width: 52%;
+            min-width: 53%;
             padding: 0;
           }
           p{
@@ -2069,7 +2086,7 @@ h2.off,p.off{display: none;}
       &:hover .img__block{
         &::after,&::before{display: none;}
       }
-      h2{font-size: 1.2em;}
+      h2{font-size: 1em !important;}
     }
     &.herizontal{
       & .production_title{
