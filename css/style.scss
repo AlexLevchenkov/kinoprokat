@@ -1222,6 +1222,11 @@ h2.off,p.off{display: none;}
       }
     }
   }
+  &.none-link{
+    .product_menu:hover .img__block{
+      &::before,&::after{display: none;}
+    }
+  }
 }
 .production_title{
   font-size: 20px;

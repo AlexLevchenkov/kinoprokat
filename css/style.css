@@ -1734,6 +1734,10 @@ h2.off, p.off {
   height: 68%;
 }
 
+.production_block.none-link .product_menu:hover .img__block::before, .production_block.none-link .product_menu:hover .img__block::after {
+  display: none;
+}
+
 .production_title {
   font-size: 20px;
   margin-bottom: 20px;
