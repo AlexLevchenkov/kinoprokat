@@ -3145,6 +3145,9 @@ h2.off, p.off {
     -ms-grid-columns: (1fr)[1] !important;
         grid-template-columns: repeat(1, 1fr) !important;
   }
+  .product-block .product-block__info .info-block__text-item .subtitle {
+    font-size: 1.1em !important;
+  }
   .product-block .similar-item-block .similar-item-block__product.production_block .product_menu h2 {
     font-size: 1em !important;
     min-width: 55% !important;

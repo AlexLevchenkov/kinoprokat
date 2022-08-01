@@ -2414,6 +2414,9 @@ h2.off,p.off{display: none;}
             grid-template-columns: repeat(1, 1fr) !important;
           }
         }
+        & .subtitle{
+          font-size: 1.1em !important;
+        }
       }
     }
     & .similar-item-block .similar-item-block__product.production_block{
