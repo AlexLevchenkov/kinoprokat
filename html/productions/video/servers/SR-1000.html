@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Интегрированный медиаблок SR-1000 Standalone IMB™</title>
+  <link rel="stylesheet" href="../../../../css/style.css">
+  <link rel="stylesheet" href="../../../../css/null.css">
+  <link rel="shortcut icon" href="../../../../img/favicon.ico" type="image/x-icon">
+  <script src="../../../../js/jquary.js"></script>
+  <script src="../../../../js/main.js"></script>
+  <script src="../../../../js/switcher.js"></script>
+</head>
+<body class="dark v_3">
+<div class="svg" style="display: none;">
+  <svg>
+    <symbol id="instagram_svg" viewBox="0 0 24 24">
+      <g>
+        <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+      </g>
+    </symbol>
+  </svg>
+  <svg>
+    <symbol id="facebook_svg" viewBox="0 0 24 24">
+      <g>
+        <path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"/>
+      </g>
+    </symbol>
+  </svg>
+  <svg>
+    <symbol id="linkedin_svg" viewBox="0 0 24 24">
+      <g>
+        <path d="M4.98 3.5c0 1.381-1.11 2.5-2.48 2.5s-2.48-1.119-2.48-2.5c0-1.38 1.11-2.5 2.48-2.5s2.48 1.12 2.48 2.5zm.02 4.5h-5v16h5v-16zm7.982 0h-4.968v16h4.969v-8.399c0-4.67 6.029-5.052 6.029 0v8.399h4.988v-10.131c0-7.88-8.922-7.593-11.018-3.714v-2.155z"/>
+      </g>
+    </symbol>
+  </svg>
+  <svg>
+    <symbol id="telegram_svg" viewBox="0 0 24 24">
+      <g>
+        <path id="telegram-1" d="M18.384,22.779c0.322,0.228 0.737,0.285 1.107,0.145c0.37,-0.141 0.642,-0.457 0.724,-0.84c0.869,-4.084 2.977,-14.421 3.768,-18.136c0.06,-0.28 -0.04,-0.571 -0.26,-0.758c-0.22,-0.187 -0.525,-0.241 -0.797,-0.14c-4.193,1.552 -17.106,6.397 -22.384,8.35c-0.335,0.124 -0.553,0.446 -0.542,0.799c0.012,0.354 0.25,0.661 0.593,0.764c2.367,0.708 5.474,1.693 5.474,1.693c0,0 1.452,4.385 2.209,6.615c0.095,0.28 0.314,0.5 0.603,0.576c0.288,0.075 0.596,-0.004 0.811,-0.207c1.216,-1.148 3.096,-2.923 3.096,-2.923c0,0 3.572,2.619 5.598,4.062Zm-11.01,-8.677l1.679,5.538l0.373,-3.507c0,0 6.487,-5.851 10.185,-9.186c0.108,-0.098 0.123,-0.262 0.033,-0.377c-0.089,-0.115 -0.253,-0.142 -0.376,-0.064c-4.286,2.737 -11.894,7.596 -11.894,7.596Z"/>
+      </g>
+    </symbol>
+  </svg>
+  <svg>
+    <symbol id="twitter_svg" viewBox="0 0 24 24">
+      <g>
+        <path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"/>
+      </g>
+    </symbol>
+  </svg>
+  <svg>
+    <symbol id="youtube_svg" viewBox="0 0 24 24">
+      <g>
+        <path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"/>
+      </g>
+    </symbol>
+  </svg>
+  <svg>
+    <symbol id="snowflake_svg" viewBox="0 0 44.001 44.001">
+      <g>
+        <path d="m41.477,13.689l-.529,1.941-4.057-1.066-5.35,3.088 2.748,.721 3.092-1.782 1,1.733-3.807,2.197-5.508-1.444-5.066,2.926 5.066,2.922 5.508-1.44 3.807,2.197-1,1.733-3.092-1.786-2.748,.725 5.35,3.088 4.057-1.066 .529,1.938-2.109,.557 2.197,1.266-1.002,1.734-2.197-1.27 .574,2.104-1.943,.512-1.106-4.045-5.351-3.084 .75,2.738 3.09,1.787-1.002,1.729-3.807-2.197-1.502-5.484-5.068-2.926v5.852l4.002,4.045v4.391h-1.998v-3.564l-2.004-2.02v6.178l2.951,2.975-1.414,1.428-1.537-1.549v2.535h-2v-2.535l-1.539,1.549-1.412-1.428 2.951-2.975v-6.178l-2.002,2.02v3.564h-2v-4.391l4.002-4.045v-5.852l-5.068,2.926-1.502,5.484-3.807,2.197-1.002-1.732 3.09-1.787 .75-2.738-5.355,3.084-1.102,4.045-1.943-.512 .574-2.104-2.197,1.27-1.002-1.734 2.197-1.266-2.109-.557 .529-1.938 4.056,1.067 5.35-3.088-2.748-.725-3.092,1.787-1-1.733 3.807-2.197 5.504,1.44 5.068-2.922-5.068-2.926-5.504,1.444-3.807-2.197 1-1.733 3.092,1.782 2.748-.721-5.35-3.088-4.057,1.067-.529-1.941 2.109-.553-2.197-1.269 1.002-1.731 2.197,1.266-.574-2.104 1.943-.513 1.102,4.045 5.355,3.089-.75-2.743-3.09-1.782 1.002-1.733 3.807,2.197 1.502,5.489 5.068,2.922v-5.848l-4.002-4.045v-4.395h2v3.569l2.002,2.019v-6.177l-2.951-2.979 1.412-1.424 1.539,1.55v-2.539h2v2.539l1.537-1.55 1.414,1.424-2.951,2.979v6.178l2.004-2.019v-3.57h1.998v4.395l-4.002,4.045v5.848l5.068-2.922 1.502-5.489 3.807-2.197 1.002,1.733-3.09,1.782-.75,2.743 5.351-3.089 1.106-4.045 1.943,.513-.574,2.103 2.197-1.266 1.002,1.731-2.197,1.269 2.11,.554z"/>
+      </g>
+    </symbol>
+  </svg>
+  <svg>
+    <symbol id="alternative_svg" viewBox="0 0 611.988 611.988">
+      <g>
+        <path d="M45.343,181.859h45.344l74.59,93.249l59.196-73.388L136.03,91.172H45.343C20.291,91.172,0,111.463,0,136.516
+          S20.291,181.859,45.343,181.859z M476.105,181.859v38.27c6.757,6.688,27.887,9.477,34.643,2.789l96.174-72.708
+          c6.756-6.688,6.756-17.548,0-24.236l-96.174-72.708c-6.756-6.711-27.886-10.565-34.643-3.877v41.807H362.747L90.687,431.271
+          H45.343C20.291,431.271,0,451.562,0,476.614c0,25.052,20.291,45.343,45.343,45.343h90.687l272.061-340.075h68.015V181.859z
+            M510.748,389.668c-6.756-6.688-27.886-4.92-34.643,1.769v39.812h-68.015l-74.59-93.249l-59.196,73.389l88.442,110.547h113.358
+          v40.378c6.757,6.688,27.887,3.719,34.643-2.97l96.174-72.708c6.756-6.688,6.756-17.548,0-24.236L510.748,389.668z"/>
+      </g>
+    </symbol>
+  </svg>
+</div>
+<div class="header">
+<div class="container">
+  <div class="logo">
+    <div class="logo_block">
+      <a href="/kinoprokat/">
+        <img src="../../../../img/v_1/logo_light.png" alt="">
+      </a>
+    </div>
+  </div>
+  <div class="mobile_menu">
+    <div class="burger"><img src="../../../../img/v_1/mobile_menu.png" alt="mobile_menu"></div>
+    <div class="mobile_menu_block">
+      <ul class="mobile_menu_list">
+        <li id="mob_top_close">✖</li>
+        <li class="link"><a href="/kinoprokat/">Главная</a></li>
+        <li class="link"><a href="/kinoprokat/html/news.html">Новости</a></li>
+        <li class="link submenu submenu_closed">
+          <a href="/kinoprokat/html/production.html">Продукция</a>
+          <ul>
+            <li class="link"><a href="#">Видео</a></li>
+            <li class="link"><a href="#">Звук</a></li>
+            <li class="link"><a href="#">3D системы</a></li>
+            <li class="link"><a href="#">Подъемный механизм</a></li>
+            <li class="link"><a href="#">4D залы</a></li>
+            <li class="link"><a href="#">Кресла</a></li>
+            <li class="link"><a href="#">3D очки</a></li>
+            <li class="link"><a href="#">Лампы</a></li>
+            <li class="link"><a href="#">Киноэкраны</a></li>
+            <li class="link"><a href="#">Звукоизоляционные плиты</a></li>
+            <li class="link"><a href="#">Дополнительное оборудование</a></li>
+            <li class="link"><a href="#">Свет</a></li>
+          </ul>
+          <div class="submenu_opener"></div>
+        </li>
+        <li class="link"><a href="/kinoprokat/html/services.html">Услуги</a></li>
+        <li class="link submenu submenu_closed">
+          <a href="/kinoprokat/html/projects.html">Проекты</a>
+          <ul>
+            <li class="link"><a href="#">Планета Кино "АППОЛО"</a></li>
+            <li class="link"><a href="#">Планета Кино Одесса</a></li>
+            <li class="link"><a href="#">Планета Кино "Мост-кино"</a></li>
+          </ul>
+          <div class="submenu_opener"></div>
+        </li>
+        <li class="link"><a href="#">О нас</a></li>
+        <li class="link"><a href="/kinoprokat/html/contacts.html">Контакты</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="language">
+    <img src="../../../../img/v_1/language_back_light.png" alt="">
+    <div class="language_options">
+      <button id="ua" class="language_option">УК</button>
+      <button id="en" class="language_option">EN</button>
+      <button id="ru" class="language_option selected">RU</button>
+    </div>
+  </div>
+</div>
+</div>
+<section class="menu">
+  <div class="container">
+    <a id="news" class="main_menu" href="/kinoprokat/html/news.html">
+      <img src="../../../../img/animation/news.png" alt="news image">
+      <h2 id="ru" class="name">НОВОСТИ</h2>
+      <h2 id="ua" class="name off">НОВИНИ</h2>
+      <h2 id="en" class="name off">NEWS</h2>
+    </a>
+    <a id="production" class="main_menu" href="/kinoprokat/html/production.html">
+      <img src="../../../../img/animation/production.png" alt="production image">
+      <h2 id="ru" class="name">Продукция</h2>
+      <h2 id="ua" class="name off">Продукція</h2>
+      <h2 id="en" class="name off">Products</h2>
+    </a>
+    <a id="services" class="main_menu" href="/kinoprokat/html/services.html">
+      <img src="../../../../img/animation/services.png" alt="services image">
+      <h2 id="ru" class="name">Услуги</h2>
+      <h2 id="ua" class="name off">Послуги</h2>
+      <h2 id="en" class="name off">Services</h2>
+    </a>
+    <a id="projects" class="main_menu" href="/kinoprokat/html/projects.html">
+      <img src="../../../../img/animation/projects.png" alt="projects image">
+      <h2 id="ru" class="name">Проекты</h2>
+      <h2 id="ua" class="name off">Проекти</h2>
+      <h2 id="en" class="name off">Projects</h2>
+    </a>
+    <a id="about_us" class="main_menu" href="#"> 
+      <img src="../../../../img/animation/about_us.png" alt="about_us image">
+      <h2 id="ru" class="name">О нас</h2>
+      <h2 id="ua" class="name off">Про нас</h2>
+      <h2 id="en" class="name off">About us</h2>
+    </a>
+    <a id="contacts" class="main_menu" href="/kinoprokat/html/contacts.html">
+      <img src="../../../../img/animation/contacts.png" alt="contacts image">
+      <h2 id="ru" class="name">Контакты</h2>
+      <h2 id="ua" class="name off">Контакти</h2>
+      <h2 id="en" class="name off">Contacts</h2>
+    </a>
+  </div>
+</section>
+<section class="main">
+  <div class="section_name"><div class="block_name">Интегрированный медиаблок SR-1000 Standalone IMB™</div></div>
+  <div class="container">
+    <div class="product-block">
+      <div class="product-block__img img-block">
+        <div class="img-block__slider">
+          <div class="slider__mini-photo">
+            <img src="../../../../img/production/servers/SR-1000_2.jpg" alt="SR-1000 img">
+            <img src="../../../../img/production/servers/SR-1000_3.jpg" alt="SR-1000 img">
+            <img src="../../../../img/production/servers/SR-1000_4.jpg" alt="SR-1000 img">
+          </div>
+          <div class="slider__main-photo slider__nav">
+            <div class="slider__nav-left">
+              <img src="../../../../img/production/arrow_left.png" alt="">
+            </div>
+            <img src="../../../../img/production/servers/SR-1000.jpg" alt="SR-1000 img">
+            <div class="slider__nav-right">
+              <img src="../../../../img/production/arrow_right.png" alt="">
+            </div>
+          </div>
+        </div>
+        <ul class="main-advantages">
+          <li>_</li>
+          <li>_</li>
+          <li>_</li>
+        </ul>
+      </div>
+      <div class="product-block__title title-block">
+        <h2 class="title-block__title-product">Проверенный временем медаиблок с превосходной производительностью</h2>
+        <!-- <ul class="title-block__advantages">
+          <li>Выдающееся качество изображения</li>
+          <li>Готовность к будущему — уже сегодня</li>
+          <li>Barco EcoPure™</li>
+          <li>Настроить и забыть</li>
+        </ul> -->
+      </div>
+      <div class="product-block__info info-block">
+        <div class="info-block__menu">
+          <button id="description" class="info-block__menu-item selected">Описание</button>
+          <button id="characteristics" class="info-block__menu-item">Характеристики</button>
+        </div>
+        <div class="info-block__text-block">
+          <button id="description" class="info-block__menu-item selected mobile">Описание</button>
+          <div class="info-block__text-item description selected">
+            GDС находится в авангарде развития кинотехнологий с момента появления цифрового кино. Внедряя инновационные для рынка решения, компания GDС является признанным на мировом уровне лидером в сфере технологии интегрированных медиаблоков (IМВ). SR-1000 — это медиасервер цифрового кинопоказа шестого поколения, который практически не требует техобслуживания и влечет минимальные эксплуатационные расходы. <br> <br>
+            Благодаря своей гибкой современной архитектуре функционал SR-1000 может быть с легкостью расширен, к примеру поддержкой 4K, встроенной бездисковой памятью CineCache TM на 2Тб или встроенным аудиопроцессором 5.1/7.1. Кроме того, существует возможность использовать два других дополнительных расширения: <br> <br>
+            (i) встроенный аудиопроцессор 15.1 для замены внешнего аудиопроцессора для залов использующих DTS:X TM ; а также <br> <br>
+            (ii) возможность декодирования DTS:X 16/24 – канального звука для использования в будущих решениях иммерсивного звучания на основе технологии DTS: X. <br> <br>
+            SR-1000 поддерживает воспроизведение пакетов цифрового кино SMPTE и Interop (DCP) со скоростью передачи данных до 500 Мбит/с1; технология DTS:X включает в себя стандарт иммерсивного аудиопотока (IAB) SMPTE’s ST 2098-2 – единый иммерсивный аудиостандарт для кинотеатров.
+            <h4 class="subtitle" style="font-size: 1.6em;color: #D23643;">Основные преимущества SR-1000 Standalone IMB™</h4>
+            <h4 class="subtitle">Высокая надежность</h4>
+            Общая стабильность системы обеспечивается с помощью встроенной интегрированной силовой электроники, используемой в продукции медицинского и военного назначения. SR 1000 сертифицирован в SGS на 100,000 часов безотказной работы
+            <h4 class="subtitle">Совместимость с проекторами 1,2,3 и 4 серии</h4>
+            Медиаблок SR-1000 органично сочетается с проекторами 1,2,3 и 4 серии, включая Barco, Christie и NEC, в целях обеспечения высокой надежности и безопасной доставки контента.
+            <h4 class="subtitle">Память CineCache</h4>
+            Медиаблок SR-1000 спроектирован с использованием бездисковой памяти CineCache (встроенная буферная память) объемом до 2 Тб, что обеспечивает ему 3 основных преимущества:
+            <ol style="padding-left: 30px;">
+              <li>Закачка фильма за 30 минут без прерывания показа <br>
+                CineCache 2 Тб обеспечивает невероятно быструю закачку контента во время воспроизведения. Закачка контента и воспроизведение могут вестись одновременно без использования локального хранилища на жестких дисках Среднестатистический фильм^ можно закачать приблизительно за 30 минут без прерывания воспроизведения. Больше не нужно ждать окончания фильма, чтобы закачать контент.</li> <br>
+              <li>Невероятно быстрая передача контента между медиаблоками <br>
+                Для медиаблоков с CineCache 2 Тб контент можно передавать практически молниеносно посредством гигабитного LAN порта не прерывая воспроизведение . Среднестатистический фильм^ между IMB можно передать приблизительно за 30 минут.</li> <br>
+              <li>Высокоскоростное и надежное воспроизведение в дву-проекционных 3Д системах CineCache – это передовая технология, обеспечивающая очень надежное воспроизведение 3Д контента со скоростью 120 кадров в секунду на глаз в системе с двумя проекторами.</li>
+            </ol>
+            ^Продолжительность среднего фильма составляет от 90 до 120 минут.
+            <h4 class="subtitle">Поддержка воспроизведение тысяч фильмов</h4>
+            При планировании расписания воспользуйтесь всеми преимуществами технологии Ultra Storage , которая позволяет хранить более 2000 фильмов в сочетании с Cinema Automation CA 2.0. Контент доступен для воспроизведения на любом экране в любое время. Вамбольше не нужно загружать фильмы на каждый медаиблок для воспроизведения, что экономит часы времени на управление контентом.
+            <h4 class="subtitle">Встроенный Wi-Fi с интуитивно понятным пользовательским веб-интерфейсом</h4>
+            Все функции аудио и видео можно настраивать и контролировать удаленно через простой в использовании веб-интерфейс. Веб-интерфейс, подключенный к встроенному Wi-Fi SR-1000 удобен и интуитивно понятен. Благодаря функциям перетаскивания, фильтрации и навигации операторы могут легко переключаться между вкладками и страницами. Помимо доступа к пользовательскому интерфейсу через компьютер или ноутбук, беспроводной доступ также возможен с помощью портативных устройств, таких как смартфон или планшет.
+            <h4 class="subtitle">Встроенное звуковое решение</h4>
+            SR-1000 предлагает различные встроенные аудио опции: звуковой кинопроцессор 5.1/7.1/15.1 и 16-/24- канальный декодер DTS:X. Решения DTS:X для иммерсивного звука обеспечивают полную поддержку стандарта иммерсивного аудиопотока (IAB) SMPTE ST 2098-2, который является важной вехой на пути к созданию единого совместимого аудиоформата. Стандарт SMPTE’s IAB принесет еще больше захватывающего контента DTS:X на большие экраны по всему миру – в том виде, как и задумывают создатели фильмов.
+          </div>
+          <button id="characteristics" class="info-block__menu-item mobile">Характеристики</button>
+          <div class="info-block__text-item characteristics">
+            <table class="characteristics__table">
+              <tbody>
+                <tr>
+                  <th data-bind="text: specName">Системные интерфейсы</th>
+                  <td data-bind="html: specValue">
+                    <ul>
+                      <li><ul>
+                        <li>2 x Гигабитный сетевой порт – (1GbE/RJ-45)</li>
+                        <li>1 x eSATA 6 Gbps</li>
+                        <li>2 x USB 3.0 (A-Type Female)</li>
+                        <li>1 x BNC (video sync input)</li>
+                        <li>1 x HDMI® 2.0 (вход для альтернативного контента)</li>
+                        <li>8 x GPI (2 x RJ-45)</li>
+                        <li>8 x GPO (2 x RJ-45)</li>
+                      </ul></li>
+                    </ul>
+                  </td>
+                </tr>
+                <tr>
+                  <th data-bind="text: specName">Аудио выход</th>
+                  <td data-bind="html: specValue">24-бит AES3, до 24-каналов, 48/96 кГц (2/31 xRJ-45)</td>
+                </tr>
+                <tr>
+                  <th data-bind="text: specName">Обработка аудио</th>
+                  <td data-bind="html: specValue">
+                    <ul>
+                      <li>До 24-каналов DTS:X декодер</li>
+                      <li>15-канальный 1/3 октавный графический эквалайзер и независимая регулировка НЧ/ВЧ (кроме LFE)</li>
+                      <li>Параметрический эквалайзер для LFE каналов</li>
+                      <li>Глобальная задержка для всех каналов и независимая задержка(500 мс) для отдельных каналов</li>
+                    </ul>
+                  </td>
+                </tr>
+                <tr>
+                  <th data-bind="text: specName">Проигрывание DCP</th>
+                  <td data-bind="html: specValue">
+                    <ul>
+                      <li>Соответствие DCI</li>
+                      <li>JPEG 20002 – Стандартно</li>
+                      <li>2K – 24, 25, 30, 48, 50, 60 (2Д)</li>
+                      <li>2K – 24, 25, 30 (3Д)</li>
+                      <li>Опционально с обновлением3</li>
+                      <li>HFR: 2K – 120 (2Д); 48, 50, 60 (3Д)</li>
+                      <li>4K: 4K – 24, 25, 30 (2Д)</li>
+                      <li>MPEG-2/MPEG-4 – SD/HD</li>
+                      <li>SMPTE Digital Cinema Package (DCP),Interop DCP</li>
+                    </ul>
+                  </td>
+                </tr>
+                <tr>
+                  <th data-bind="text: specName">Возможности обработки видео</th>
+                  <td data-bind="html: specValue">
+                    <ul>
+                      <li>Преобразование цветового пространства –– поддержка YCbCr709, Rec.709, X’Y’Z’, YCxCz</li>
+                      <li>Деинтерлейсинг (устранение чересстрочности)</li>
+                      <li>Масштабирование для поддержки 2K и 4K проекторов</li>
+                    </ul>
+                  </td>
+                </tr>
+                <tr>
+                  <th data-bind="text: specName">Управление</th>
+                  <td data-bind="html: specValue">
+                    <ul>
+                      <li>Графический веб-интерфейс пользователя</li>
+                      <li>Cinema Automation – CA2.0</li>
+                      <li>Автоматическое составление плей-листов -CA2.0</li>
+                      <li>API для управление из сторонних систем TMS, NOC</li>
+                    </ul>
+                  </td>
+                </tr>
+                <tr>
+                  <th data-bind="text: specName">Безопасность</th>
+                  <td data-bind="html: specValue">
+                    <ul>
+                      <li>Водяные знаки NexGuard®</li>
+                      <li>FIPS 140-2 (Сертификат безопасности 3-го уровня)</li>
+                    </ul>
+                  </td>
+                </tr>
+                <tr>
+                  <th data-bind="text: specName">Варианты интеграции со сторонними системами</th>
+                  <td data-bind="html: specValue">
+                    <ul>
+                      <li>Сторонние TMS</li>
+                      <li>Сторонние 4Д системы</li>
+                    </ul>
+                  </td>
+                </tr>
+                <tr>
+                  <th data-bind="text: specName">Субтитры</th>
+                  <td data-bind="html: specValue">
+                    <ul>
+                      <li>Наложение субтитров</li>
+                      <li>Поддержка проекционного Cinecanvas™</li>
+                    </ul>
+                  </td>
+                </tr>
+                <tr>
+                  <th data-bind="text: specName">Энергопотребление</th>
+                  <td data-bind="html: specValue">Менее 75 Вт</td>
+                </tr>
+                <tr>
+                  <th data-bind="text: specName">Варианты хранения</th>
+                  <td data-bind="html: specValue">
+                    <ul>
+                      <li>CineCache 2Тб</li>
+                      <li>Резервное локальное хранилище с опцией горячей замены (до 32Тб) и CineCache 2Тб</li>
+                      <li>Ultra Storage – CA2.0 централизованное хранилище контента и CineCache 2Тб в каждом зале</li>
+                    </ul>
+                  </td>
+                </tr>
+                <tr>
+                  <th data-bind="text: specName">Устройство для скрытых субтитров</th>
+                  <td data-bind="html: specValue">Поддержка SMPTE430-10 </td>
+                </tr>
+                <tr>
+                  <th data-bind="text: specName">Физические размеры и внешняя среда</th>
+                  <td data-bind="html: specValue">
+                    <ul>
+                      <li>Размеры (ШxВxД) – 320 x 63.7 x 240 мм</li>
+                      <li>Вес – 1.4 кг</li>
+                      <li>Рабочая температура – 0°C до 40° (32°F до 104°F)</li>
+                      <li>Рабочая влажность – 20% до 90%, без конденсата</li>
+                      <li>Максимальная рабочая высота – 10,000 ft. (3,000м) над уровнем моря</li>
+                    </ul>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            <ol style="padding-left: 30px; margin-top:-40px; margin-left:30px;">
+              <li>Зависит от выбранной конфигурации SR-1000</li>
+              <li>Уточните у GDC актуальную информацию по поддержке частоты кадров и разрешения</li>
+              <li>Необходима платная лицензия</li>
+              <li>Зависит от спецификации жестких дисков</li>
+            </ol>
+          </div>
+        </div>
+      </div>
+      <div class="product-block__similar-item similar-item-block">
+        <div class="similar-item-block__title">Похожие товары</div>
+        <div class="similar-item-block__product production_block">
+          <a class="product_menu" href="ICMP-X.html">
+            <div class="img__block">
+              <img src="../../../../img/production/servers/ICMP-X.jpg" alt="ICMP-X image">
+            </div>
+            <div class="text__block">
+              <h2>Barco Alchemy <br> ICMP-X</h2>
+              <ul class="main-advantages">
+                <li>_</li>
+                <li>_</li>
+                <li>_</li>
+              </ul>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<div class="footer">
+<div class="container">
+  <ul>
+    <li>
+      <a href="https://www.instagram.com/kinoprokatgroup/" target="_blank">
+        <button id="instagramm" class="social social_svg">
+          <svg class="social_icon">
+            <use  xlink:href="#instagram_svg"></use>
+          </svg>
+        </button>
+      </a>
+    </li>
+    <li>
+      <a href="https://www.facebook.com/KinoprokatGroup/" target="_blank">
+        <button id="facebook" class="social social_svg">
+          <svg class="social_icon">
+            <use  xlink:href="#facebook_svg"></use>
+          </svg>
+        </button>
+      </a>
+    </li>
+    <li>
+      <a href="https://www.youtube.com/channel/UC_ruqHeR5Be7YcdJ7-V1WaQ" target="_blank">
+        <button id="youtube" class="social social_svg">
+          <svg class="social_icon">
+            <use  xlink:href="#youtube_svg"></use>
+          </svg>
+        </button>
+      </a>
+    </li>
+    <li class="switcher">
+      <button id="switcher">
+        <img src="../../../../img/v_1/switch_light.png" alt="switch">
+      </button>
+    </li>
+    <li>
+      <a href="#" target="_blank">
+        <button id="twitter" class="social social_svg">
+          <svg class="social_icon">
+            <use  xlink:href="#twitter_svg"></use>
+          </svg>
+        </button>
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_blank">
+        <button id="linkedin" class="social social_svg ">
+          <svg class="social_icon">
+            <use  xlink:href="#linkedin_svg"></use>
+          </svg>
+        </button>
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_blank">
+        <button id="telegram" class="social social_svg">
+          <svg class="social_icon">
+            <use  xlink:href="#telegram_svg"></use>
+          </svg>
+        </button>
+      </a>
+    </li>
+  </ul>
+</div>
+</div>
+</body>
+</html>

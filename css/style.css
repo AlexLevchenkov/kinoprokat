@@ -542,7 +542,7 @@ h2.off, p.off {
 }
 
 #services img {
-  height: 80%;
+  height: 60%;
 }
 
 .block_name {
@@ -1645,7 +1645,6 @@ h2.off, p.off {
   font-size: 2em;
   text-shadow: 2px 2px 2px #000;
   padding: 5px 0;
-  border-bottom: 2px solid #fff;
   font-weight: bolder;
 }
 
@@ -1661,6 +1660,7 @@ h2.off, p.off {
 }
 
 .production_block .product_menu .main-advantages {
+  border-top: 2px solid #fff;
   padding: 5px 0;
 }
 
@@ -1812,6 +1812,8 @@ h2.off, p.off {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  background: #fff;
+  margin: 10px;
 }
 
 .product-block .product-block__img .img-block__slider img {
@@ -2134,6 +2136,11 @@ h2.off, p.off {
   text-align: left;
   padding: 5px 10px;
   border: 2px solid #fff;
+}
+
+.characteristics__table tr th ul li, .characteristics__table tr td ul li {
+  text-align: justify;
+  margin-bottom: 10px;
 }
 
 .characteristics__table-four-column tr th, .characteristics__table-four-column tr td {
