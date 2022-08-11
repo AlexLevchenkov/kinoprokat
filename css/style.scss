@@ -1160,6 +1160,11 @@ h2.off,p.off{display: none;}
         color: #fff;
         font-size: 1em;
         word-wrap: break-word;
+        line-height: 1.3em;
+        span{
+          font-weight: bold;
+          font-size: 1.1em;
+        }
       }
     }
     &:hover .img__block{
@@ -1514,9 +1519,12 @@ h2.off,p.off{display: none;}
             min-width: 53%;
             padding: 0;
           }
-          p{
+          ul{
             font-size: 0.6em;
             padding: 5px 0;
+            border: none;
+            li{line-height: 1em;}
+            span{font-weight: normal;}
           }
           &::after{
             transform: none;

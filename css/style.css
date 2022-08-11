@@ -1668,6 +1668,12 @@ h2.off, p.off {
   color: #fff;
   font-size: 1em;
   word-wrap: break-word;
+  line-height: 1.3em;
+}
+
+.production_block .product_menu .main-advantages li span {
+  font-weight: bold;
+  font-size: 1.1em;
 }
 
 .production_block .product_menu:hover .img__block {
@@ -2091,9 +2097,18 @@ h2.off, p.off {
   padding: 0;
 }
 
-.product-block .product-block__similar-item .similar-item-block__product.production_block.production_block-hovizontal > .product_menu p {
+.product-block .product-block__similar-item .similar-item-block__product.production_block.production_block-hovizontal > .product_menu ul {
   font-size: 0.6em;
   padding: 5px 0;
+  border: none;
+}
+
+.product-block .product-block__similar-item .similar-item-block__product.production_block.production_block-hovizontal > .product_menu ul li {
+  line-height: 1em;
+}
+
+.product-block .product-block__similar-item .similar-item-block__product.production_block.production_block-hovizontal > .product_menu ul span {
+  font-weight: normal;
 }
 
 .product-block .product-block__similar-item .similar-item-block__product.production_block.production_block-hovizontal > .product_menu::after {
