@@ -215,7 +215,8 @@ body.main.horizontal section .container {
   display: -ms-grid;
   display: grid;
   justify-items: center;
-      grid-template-areas: "A B C" "D E F";
+      grid-template-areas: "A B C"
+ "D E F";
   gap: 70px;
   padding: 10px;
   padding-top: 50px;
@@ -226,7 +227,9 @@ body.main.vertical section .container {
   display: -ms-grid;
   display: grid;
   justify-items: center;
-      grid-template-areas: "A B" "C D" "E F";
+      grid-template-areas: "A B"
+ "C D"
+ "E F";
   gap: 10px;
   height: 100%;
 }
@@ -542,7 +545,7 @@ h2.off, p.off {
 }
 
 #services img {
-  height: 60%;
+  height: 80%;
 }
 
 .block_name {
@@ -670,7 +673,10 @@ h2.off, p.off {
   background-position: center;
   background-position-y: 6px;
   color: #000 !important;
-  text-shadow: 2px 0 2px #fff,  0 2px 2px #fff,  -2px 0 2px #fff,  0 -2px 2px #fff;
+  text-shadow: 2px 0 2px #fff, 
+ 0 2px 2px #fff, 
+ -2px 0 2px #fff, 
+ 0 -2px 2px #fff;
 }
 
 .main_menu {
