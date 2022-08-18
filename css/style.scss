@@ -1125,7 +1125,7 @@ h2.off,p.off{display: none;}
       margin: 0 auto;
     }
   }
-  &.herizontal{
+  &.horizontal{
     justify-content: space-between;
     padding: 0;
   }
@@ -1205,7 +1205,7 @@ h2.off,p.off{display: none;}
       }
     }
   }
-  &.herizontal .product_menu{
+  &.horizontal .product_menu{
     max-width: none;
     width: 48% !important;
     text-align: left;
@@ -1231,7 +1231,7 @@ h2.off,p.off{display: none;}
         }
       }
     }
-    }
+  }
   &.four__grid{
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -1518,20 +1518,32 @@ h2.off,p.off{display: none;}
             }
           }
         }
-        &.production_block-hovizontal>.product_menu{
+        &.production_block-horizontal>.product_menu{
           width: 48% !important;
           margin: 1%;
           text-align: left;
-          img{
+          & .img__block{
+            width: 31%;
+            padding: 0px;
+            background-color: #fff;
             float: left;
-            width: 45%;
-            padding-right: 5px;
           }
-          h2{
-            float: left;
-            font-size: 0.7em;
-            min-width: 53%;
-            padding: 0;
+          & .text__block{
+            float: right;
+            width: 65%;
+            & h2{
+              float: left;
+              font-size: 0.7em;
+              min-width: 100%;
+              padding: 0;
+            }
+            & p{
+              font-size: 1.2em;
+              padding-right: 10px;
+              & span{
+                font-weight: bold;
+              }
+            }
           }
           ul{
             font-size: 0.6em;
@@ -1555,7 +1567,7 @@ h2.off,p.off{display: none;}
       }
     }
   }
-  &.herizontal{
+  &.horizontal{
     .img-block__slider img{background: #fff;}
     .product-block__img span{font-weight: bold;}
   }
@@ -2281,7 +2293,7 @@ h2.off,p.off{display: none;}
       }
       h2{font-size: 1em !important;}
     }
-    &.herizontal{
+    &.horizontal{
       & .production_title{
         font-size: 12px;
         order: 100;

@@ -1346,7 +1346,7 @@ h2.off, p.off {
   width: 75%;
   margin: 0 auto;
 }
-.production_block.herizontal {
+.production_block.horizontal {
   justify-content: space-between;
   padding: 0;
 }
@@ -1428,31 +1428,31 @@ h2.off, p.off {
   border-radius: 15px;
   color: #fff;
 }
-.production_block.herizontal .product_menu {
+.production_block.horizontal .product_menu {
   max-width: none;
   width: 48% !important;
   text-align: left;
   margin: 0 0 25px;
 }
-.production_block.herizontal .product_menu .img__block {
+.production_block.horizontal .product_menu .img__block {
   height: 175px;
   width: 31%;
   padding: 5px;
   background-color: #fff;
   float: left;
 }
-.production_block.herizontal .product_menu .text__block {
+.production_block.horizontal .product_menu .text__block {
   float: right;
   width: 65%;
 }
-.production_block.herizontal .product_menu .text__block h2 {
+.production_block.horizontal .product_menu .text__block h2 {
   display: inline-block;
 }
-.production_block.herizontal .product_menu .text__block p {
+.production_block.horizontal .product_menu .text__block p {
   font-size: 1.2em;
   padding-right: 10px;
 }
-.production_block.herizontal .product_menu .text__block p span {
+.production_block.horizontal .product_menu .text__block p span {
   font-weight: bold;
 }
 .production_block.four__grid {
@@ -1728,47 +1728,59 @@ h2.off, p.off {
   padding: 5px 10px;
   font-size: 0.7em;
 }
-.product-block .product-block__similar-item .similar-item-block__product.production_block.production_block-hovizontal > .product_menu {
+.product-block .product-block__similar-item .similar-item-block__product.production_block.production_block-horizontal > .product_menu {
   width: 48% !important;
   margin: 1%;
   text-align: left;
 }
-.product-block .product-block__similar-item .similar-item-block__product.production_block.production_block-hovizontal > .product_menu img {
+.product-block .product-block__similar-item .similar-item-block__product.production_block.production_block-horizontal > .product_menu .img__block {
+  width: 31%;
+  padding: 0px;
+  background-color: #fff;
   float: left;
-  width: 45%;
-  padding-right: 5px;
 }
-.product-block .product-block__similar-item .similar-item-block__product.production_block.production_block-hovizontal > .product_menu h2 {
+.product-block .product-block__similar-item .similar-item-block__product.production_block.production_block-horizontal > .product_menu .text__block {
+  float: right;
+  width: 65%;
+}
+.product-block .product-block__similar-item .similar-item-block__product.production_block.production_block-horizontal > .product_menu .text__block h2 {
   float: left;
   font-size: 0.7em;
-  min-width: 53%;
+  min-width: 100%;
   padding: 0;
 }
-.product-block .product-block__similar-item .similar-item-block__product.production_block.production_block-hovizontal > .product_menu ul {
+.product-block .product-block__similar-item .similar-item-block__product.production_block.production_block-horizontal > .product_menu .text__block p {
+  font-size: 1.2em;
+  padding-right: 10px;
+}
+.product-block .product-block__similar-item .similar-item-block__product.production_block.production_block-horizontal > .product_menu .text__block p span {
+  font-weight: bold;
+}
+.product-block .product-block__similar-item .similar-item-block__product.production_block.production_block-horizontal > .product_menu ul {
   font-size: 0.6em;
   padding: 5px 0;
   border: none;
 }
-.product-block .product-block__similar-item .similar-item-block__product.production_block.production_block-hovizontal > .product_menu ul li {
+.product-block .product-block__similar-item .similar-item-block__product.production_block.production_block-horizontal > .product_menu ul li {
   line-height: 1em;
 }
-.product-block .product-block__similar-item .similar-item-block__product.production_block.production_block-hovizontal > .product_menu ul span {
+.product-block .product-block__similar-item .similar-item-block__product.production_block.production_block-horizontal > .product_menu ul span {
   font-weight: normal;
 }
-.product-block .product-block__similar-item .similar-item-block__product.production_block.production_block-hovizontal > .product_menu::after {
+.product-block .product-block__similar-item .similar-item-block__product.production_block.production_block-horizontal > .product_menu::after {
   transform: none;
   top: 32px;
   left: 1.5%;
 }
-.product-block .product-block__similar-item .similar-item-block__product.production_block.production_block-hovizontal > .product_menu::before {
+.product-block .product-block__similar-item .similar-item-block__product.production_block.production_block-horizontal > .product_menu::before {
   height: 100%;
   right: auto;
   width: 75px;
 }
-.product-block.herizontal .img-block__slider img {
+.product-block.horizontal .img-block__slider img {
   background: #fff;
 }
-.product-block.herizontal .product-block__img span {
+.product-block.horizontal .product-block__img span {
   font-weight: bold;
 }
 
@@ -2518,29 +2530,29 @@ h2.off, p.off {
   .production_block .product_menu h2 {
     font-size: 1em !important;
   }
-  .production_block.herizontal .production_title {
+  .production_block.horizontal .production_title {
     font-size: 12px;
     order: 100;
   }
-  .production_block.herizontal .product_menu {
+  .production_block.horizontal .product_menu {
     width: 100% !important;
     text-align: left;
     margin: 0 0 25px;
   }
-  .production_block.herizontal .product_menu img {
+  .production_block.horizontal .product_menu img {
     margin-right: 5px;
   }
-  .production_block.herizontal .product_menu h2 {
+  .production_block.horizontal .product_menu h2 {
     font-size: 1.1em;
   }
-  .production_block.herizontal .product_menu p {
+  .production_block.horizontal .product_menu p {
     font-size: 1em;
     padding: 0;
   }
-  .production_block.herizontal .product_menu .img__block {
+  .production_block.horizontal .product_menu .img__block {
     width: 47%;
   }
-  .production_block.herizontal .product_menu .text__block {
+  .production_block.horizontal .product_menu .text__block {
     width: 50%;
   }
   .production_block .main_menu {
