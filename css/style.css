@@ -526,6 +526,9 @@ h2.off, p.off {
 .block_name.large {
   max-width: 600px;
 }
+.block_name.huge {
+  max-width: 800px;
+}
 
 .header {
   position: fixed;
@@ -1435,8 +1438,7 @@ h2.off, p.off {
   margin: 0 0 25px;
 }
 .production_block.horizontal .product_menu .img__block {
-  height: 175px;
-  width: 31%;
+  width: 33%;
   padding: 5px;
   background-color: #fff;
   float: left;

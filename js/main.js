@@ -46,7 +46,7 @@ $(document).ready(function(){
   });
   function clearFilterTable($table){
     var $filters = $table.find('th');
-    var $rows = $table.find('thead~tbody>tr:not(.sub-table)');
+    var $rows = $table.find('thead~tbody>tr');
     $filters.find('select').val("");
     $rows.each(function () {$(this).css('display', '')});
   }
@@ -64,8 +64,10 @@ $(document).ready(function(){
       });
       if (valid === true) {
         $(this).css('display', '');
+        $(this).next().css('display', '');
       } else {
         $(this).css('display', 'none');
+        $(this).next().css('display', 'none');
       }
     });
   }
@@ -84,8 +86,10 @@ $(document).ready(function(){
       });
       if (valid === true) {
         $(this).css('display', '');
+        $(this).next().css('display', '');
       } else {
         $(this).css('display', 'none');
+        $(this).next().css('display', 'none');
       }
     });
   }
