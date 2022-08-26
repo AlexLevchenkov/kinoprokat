@@ -93,6 +93,7 @@ body{
     & .hall__text{color: #fff;}
     & .list-halls{background: var(--background-dark);button{color: #fff;}}
     & .hall__table{border: 3px solid #2b2b2b;tr td{border: 2px solid #fff;color: #fff;}}
+    & .download__item{background: var(--background-dark);}
   }
   &.light{
     & .menu .main_menu h2{color: #000;}
@@ -142,6 +143,7 @@ body{
     & .hall__text{color: #000;}
     & .list-halls{background: var(--background-light);button{color: #000;}}
     & .hall__table{border: 3px solid #d6d9d9;tr td{border: 2px solid #000;color: #000;}}
+    & .download__item{background: var(--background-light);}
   }
   &.main{
     & .header{position: absolute;}
@@ -1888,18 +1890,9 @@ h2.off,p.off{display: none;}
         font-size: 1.8em;
         letter-spacing: 5px
       }
-      h2{
-        font-size: 4em;
-        text-transform: uppercase;
-        font-weight: bolder;
-        text-align: center;
-        letter-spacing: 10px;
-        span{
-          vertical-align: super;
-          font-size: 0.6em;
-          color: #6b110c;
-          letter-spacing: 5px
-        }
+      img{
+        width: 86%;
+        margin-left: 7%;
       }
     }
     .img__title{
@@ -1913,7 +1906,6 @@ h2.off,p.off{display: none;}
       text-align: justify;
     }
     .info-block__guarantees {
-      
       .guarantees__block {
         width: 100%;
         display: grid;
@@ -1941,7 +1933,8 @@ h2.off,p.off{display: none;}
             bottom: -20px;
             left: 50%;
             transform: translate(-50%,0);
-            
+            font-size: 12px;
+            text-align: center;
           }
           &:nth-child(5),&:nth-child(6){
             .guarantees__title{
@@ -1952,14 +1945,98 @@ h2.off,p.off{display: none;}
       }
     }
     .info-block__characteristics {
-
-      
       .characteristics__table {
         font-size: 18px;
+        th, td{width: 25%;}
         span{
           font-size: 12px;
         }
       }
+    }
+    .info-block__options{
+      .img_block{
+        display: flex;
+        justify-content: space-between;
+        margin: 0 5%;
+        .img__item{
+          position: relative;
+          width: 47%;
+          padding: 5px;
+          background:var(--background-red);
+          border-radius: 11%;
+          img{
+            width: 100%;
+          }
+          .img__title{
+            font-size: 1.2em;
+            width: 80px;
+            text-align: center;
+            padding:6px;
+            border-radius: 5px;
+            position: absolute;
+            background:var(--background-red);
+            color: #fff;
+            bottom: 0px;
+            left:50%;
+            transform: translate(-50%, 0)
+          }
+        }
+      }
+    }
+    .info-block__chamfers{
+      .chamfers__options{
+        display: flex;
+        justify-content: space-between;
+        margin: 0 5%;
+        .chamfers__item{
+          width: 30%;
+          img{
+            width: 100%;
+          }
+          .chamfers__title{
+            text-align: center;
+            font-size: 2em;
+          }
+        }
+      }
+    }
+  }
+  .download__block{
+    width: 63%;
+    margin-left: auto;
+    margin-bottom: 20px;
+    .download__item{
+      width: 100%;
+      border-radius: 5px;
+      padding: 10px 0;
+      padding-left: 20px;
+      font-weight: bold;
+      margin-top: 10px;
+      position: relative;
+      height: 55px;
+      position: relative;
+      line-height: 1.5em;
+      .download__text{
+        position: absolute;
+        top: 50%;
+        transform: translate(0, -50%);
+        width: 80%;
+      }
+      &::before{
+        content: "СКАЧАТЬ";
+        width: 15%;
+        position: absolute;
+        top: 50%;
+        transform: translate(0, -50%);
+        right: 5px;
+        text-align: center;
+        padding: 12px 0;
+        background: var(--background-red);
+        border-radius: 10px;
+        cursor: pointer;
+        color: #fff;
+      }
+      span{color: #A12B33}
     }
   }
 }
@@ -2832,20 +2909,10 @@ h2.off,p.off{display: none;}
         }
       }
       .info-block__characteristics {
-  
-        
         .characteristics__table {
-          font-size: 14px;
+          font-size: 11px;
           span{
             font-size: 10px;
-          }
-          tr{
-            th{
-              width: 35%;
-            }
-            td{
-              width: 65%;
-            }
           }
         }
       }
@@ -2853,6 +2920,21 @@ h2.off,p.off{display: none;}
     .block_name{
       max-width: 75vw;
       font-size: 18px;
+    }
+    .download__block{
+      width: 100%;
+      .download__item{
+        padding-left: 10px;
+        font-size: 12px;
+        font-weight: normal;
+        .download__text{
+          width: 70%;
+          line-height: 12px;
+        }
+        &::before{
+          width: 20%;
+        }
+      }
     }
   }
 }

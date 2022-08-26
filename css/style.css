@@ -128,6 +128,9 @@ body.dark .hall__table tr td {
   border: 2px solid #fff;
   color: #fff;
 }
+body.dark .download__item {
+  background: var(--background-dark);
+}
 body.light .menu .main_menu h2 {
   color: #000;
 }
@@ -228,6 +231,9 @@ body.light .hall__table {
 body.light .hall__table tr td {
   border: 2px solid #000;
   color: #000;
+}
+body.light .download__item {
+  background: var(--background-light);
 }
 body.main .header {
   position: absolute;
@@ -2099,18 +2105,9 @@ h2.off, p.off {
   font-size: 1.8em;
   letter-spacing: 5px;
 }
-.acoustic-panels__block .acoustic-panels__info-block .info-block__title h2 {
-  font-size: 4em;
-  text-transform: uppercase;
-  font-weight: bolder;
-  text-align: center;
-  letter-spacing: 10px;
-}
-.acoustic-panels__block .acoustic-panels__info-block .info-block__title h2 span {
-  vertical-align: super;
-  font-size: 0.6em;
-  color: #6b110c;
-  letter-spacing: 5px;
+.acoustic-panels__block .acoustic-panels__info-block .info-block__title img {
+  width: 86%;
+  margin-left: 7%;
 }
 .acoustic-panels__block .acoustic-panels__info-block .img__title {
   width: 100%;
@@ -2151,6 +2148,8 @@ h2.off, p.off {
   bottom: -20px;
   left: 50%;
   transform: translate(-50%, 0);
+  font-size: 12px;
+  text-align: center;
 }
 .acoustic-panels__block .acoustic-panels__info-block .info-block__guarantees .guarantees__block .guarantees__item:nth-child(5) .guarantees__title, .acoustic-panels__block .acoustic-panels__info-block .info-block__guarantees .guarantees__block .guarantees__item:nth-child(6) .guarantees__title {
   bottom: -33px;
@@ -2158,8 +2157,94 @@ h2.off, p.off {
 .acoustic-panels__block .acoustic-panels__info-block .info-block__characteristics .characteristics__table {
   font-size: 18px;
 }
+.acoustic-panels__block .acoustic-panels__info-block .info-block__characteristics .characteristics__table th, .acoustic-panels__block .acoustic-panels__info-block .info-block__characteristics .characteristics__table td {
+  width: 25%;
+}
 .acoustic-panels__block .acoustic-panels__info-block .info-block__characteristics .characteristics__table span {
   font-size: 12px;
+}
+.acoustic-panels__block .acoustic-panels__info-block .info-block__options .img_block {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 5%;
+}
+.acoustic-panels__block .acoustic-panels__info-block .info-block__options .img_block .img__item {
+  position: relative;
+  width: 47%;
+  padding: 5px;
+  background: var(--background-red);
+  border-radius: 11%;
+}
+.acoustic-panels__block .acoustic-panels__info-block .info-block__options .img_block .img__item img {
+  width: 100%;
+}
+.acoustic-panels__block .acoustic-panels__info-block .info-block__options .img_block .img__item .img__title {
+  font-size: 1.2em;
+  width: 80px;
+  text-align: center;
+  padding: 6px;
+  border-radius: 5px;
+  position: absolute;
+  background: var(--background-red);
+  color: #fff;
+  bottom: 0px;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+.acoustic-panels__block .acoustic-panels__info-block .info-block__chamfers .chamfers__options {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 5%;
+}
+.acoustic-panels__block .acoustic-panels__info-block .info-block__chamfers .chamfers__options .chamfers__item {
+  width: 30%;
+}
+.acoustic-panels__block .acoustic-panels__info-block .info-block__chamfers .chamfers__options .chamfers__item img {
+  width: 100%;
+}
+.acoustic-panels__block .acoustic-panels__info-block .info-block__chamfers .chamfers__options .chamfers__item .chamfers__title {
+  text-align: center;
+  font-size: 2em;
+}
+.acoustic-panels__block .download__block {
+  width: 63%;
+  margin-left: auto;
+  margin-bottom: 20px;
+}
+.acoustic-panels__block .download__block .download__item {
+  width: 100%;
+  border-radius: 5px;
+  padding: 10px 0;
+  padding-left: 20px;
+  font-weight: bold;
+  margin-top: 10px;
+  position: relative;
+  height: 55px;
+  position: relative;
+  line-height: 1.5em;
+}
+.acoustic-panels__block .download__block .download__item .download__text {
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);
+  width: 80%;
+}
+.acoustic-panels__block .download__block .download__item::before {
+  content: "СКАЧАТЬ";
+  width: 15%;
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);
+  right: 5px;
+  text-align: center;
+  padding: 12px 0;
+  background: var(--background-red);
+  border-radius: 10px;
+  cursor: pointer;
+  color: #fff;
+}
+.acoustic-panels__block .download__block .download__item span {
+  color: #A12B33;
 }
 
 .acoustic_panels__img-gallery {
@@ -3074,19 +3159,28 @@ h2.off, p.off {
     bottom: -33px;
   }
   .acoustic-panels__block .acoustic-panels__info-block .info-block__characteristics .characteristics__table {
-    font-size: 14px;
+    font-size: 11px;
   }
   .acoustic-panels__block .acoustic-panels__info-block .info-block__characteristics .characteristics__table span {
     font-size: 10px;
   }
-  .acoustic-panels__block .acoustic-panels__info-block .info-block__characteristics .characteristics__table tr th {
-    width: 35%;
-  }
-  .acoustic-panels__block .acoustic-panels__info-block .info-block__characteristics .characteristics__table tr td {
-    width: 65%;
-  }
   .acoustic-panels__block .block_name {
     max-width: 75vw;
     font-size: 18px;
+  }
+  .acoustic-panels__block .download__block {
+    width: 100%;
+  }
+  .acoustic-panels__block .download__block .download__item {
+    padding-left: 10px;
+    font-size: 12px;
+    font-weight: normal;
+  }
+  .acoustic-panels__block .download__block .download__item .download__text {
+    width: 70%;
+    line-height: 12px;
+  }
+  .acoustic-panels__block .download__block .download__item::before {
+    width: 20%;
   }
 }/*# sourceMappingURL=style.css.map */
