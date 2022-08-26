@@ -2834,6 +2834,7 @@ h2.off,p.off{display: none;}
   .acoustic-panels__block {
     .acoustic-panels__projects {
       width: 100%;
+      order:2;
       .project__block {
         h2{
           font-size: 1.2em;
@@ -2847,6 +2848,7 @@ h2.off,p.off{display: none;}
     }
     .acoustic-panels__info-block {
       width: 100%;
+      order:1;
       .info-block__title {
         h3{
           text-align: center;
@@ -2923,6 +2925,7 @@ h2.off,p.off{display: none;}
     }
     .download__block{
       width: 100%;
+      order:3;
       .download__item{
         padding-left: 10px;
         font-size: 12px;

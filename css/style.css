@@ -3094,6 +3094,7 @@ h2.off, p.off {
   }
   .acoustic-panels__block .acoustic-panels__projects {
     width: 100%;
+    order: 2;
   }
   .acoustic-panels__block .acoustic-panels__projects .project__block h2 {
     font-size: 1.2em;
@@ -3103,6 +3104,7 @@ h2.off, p.off {
   }
   .acoustic-panels__block .acoustic-panels__info-block {
     width: 100%;
+    order: 1;
   }
   .acoustic-panels__block .acoustic-panels__info-block .info-block__title h3 {
     text-align: center;
@@ -3170,6 +3172,7 @@ h2.off, p.off {
   }
   .acoustic-panels__block .download__block {
     width: 100%;
+    order: 3;
   }
   .acoustic-panels__block .download__block .download__item {
     padding-left: 10px;
