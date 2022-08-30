@@ -2481,6 +2481,8 @@ h2.off, p.off {
   }
   .main_menu img {
     max-width: none;
+    top: 40%;
+    height: 60%;
   }
   .services {
     padding-bottom: 100px;
