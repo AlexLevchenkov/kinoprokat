@@ -2892,6 +2892,58 @@ h2.off, p.off {
     min-width: 100%;
     width: 100%;
   }
+  .table__lamps.alt {
+    overflow: visible;
+  }
+  .table__lamps.alt .table.lamps {
+    width: 100%;
+    overflow: visible;
+    min-width: auto;
+    font-size: 9px !important;
+  }
+  .table__lamps.alt .table.lamps thead tr th {
+    font-size: 9px !important;
+  }
+  .table__lamps.alt .table.lamps thead tr th.col-1, .table__lamps.alt .table.lamps thead tr th.col-2, .table__lamps.alt .table.lamps thead tr th.col-3, .table__lamps.alt .table.lamps thead tr th.col-4, .table__lamps.alt .table.lamps thead tr th.col-5 {
+    width: 13%;
+  }
+  .table__lamps.alt .table.lamps thead tr th.col-6 {
+    width: 10%;
+  }
+  .table__lamps.alt .table.lamps thead tr th.col-7 {
+    width: 7%;
+  }
+  .table__lamps.alt .table.lamps thead tr th.col-1 > div, .table__lamps.alt .table.lamps thead tr th.col-2 > div, .table__lamps.alt .table.lamps thead tr th.col-3 > div, .table__lamps.alt .table.lamps thead tr th.col-4 > div, .table__lamps.alt .table.lamps thead tr th.col-5 > div, .table__lamps.alt .table.lamps thead tr th.col-6 > div {
+    padding: 10px 0;
+    margin: 0;
+  }
+  .table__lamps.alt .table.lamps tbody tr td.sub-table-opener::after {
+    width: 15px;
+    height: 10px;
+  }
+  .table__lamps.alt .table.lamps .slider__nav .slider__nav-right > img, .table__lamps.alt .table.lamps .slider__nav .slider__nav-left > img {
+    width: 8px !important;
+  }
+  .table__lamps.alt .table.lamps .sub-table .slider__nav.lamps {
+    margin-top: 5px;
+  }
+  .table__lamps.alt .table.lamps .sub-table .lamp__title {
+    font-size: 16px;
+    margin: 5px 0 0 10px;
+  }
+  .table__lamps.alt .table.lamps .sub-table .lamp__subtitle {
+    font-size: 12px;
+    margin: 0;
+    margin-left: 10px;
+  }
+  .table__lamps.alt .table.lamps .sub-table .characteristics {
+    width: 100%;
+    margin: 0;
+  }
+  .table__lamps.alt .table.lamps .sub-table .characteristics .characteristics__table {
+    width: 100%;
+    font-size: 12px;
+  }
   .news-block .news-block__img {
     width: 100%;
     float: none;

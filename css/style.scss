@@ -2650,6 +2650,59 @@ h2.off,p.off{display: none;}
     overflow-x: scroll;
     min-width: 100%;
     width: 100%;
+    &.alt{
+      overflow:visible;
+      .table.lamps{
+        width: 100%;
+        overflow:visible;
+        min-width: auto;
+        font-size: 9px !important; 
+        thead tr th{
+          font-size: 9px !important; 
+          &.col-1,&.col-2,&.col-3,&.col-4, &.col-5{width: 13%;}
+          &.col-6{width: 10%;}
+          &.col-7{width: 7%;}
+
+          &.col-1,&.col-2,&.col-3,&.col-4, &.col-5,&.col-6{
+            &>div{
+              padding: 10px 0;
+              margin: 0;
+            }
+          }
+        }
+        tbody tr td{
+
+          &.sub-table-opener{
+            &::after{
+              width: 15px;
+              height: 10px;
+            }
+          }
+        }
+        .slider__nav .slider__nav-right > img, .slider__nav .slider__nav-left > img{width:8px !important;}
+        .sub-table{
+          & .slider__nav.lamps{margin-top: 5px;}
+          & .lamp__title{
+            font-size: 16px;
+            margin: 5px 0 0 10px;
+          }
+          & .lamp__subtitle{
+            font-size: 12px;
+            margin: 0;
+            margin-left: 10px;
+          }
+
+          & .characteristics{
+            width: 100%;
+            margin: 0;
+            & .characteristics__table{
+              width: 100%;
+              font-size: 12px;
+            }
+          }
+        }
+      }
+    }
   }
   .news-block{
     .news-block{
