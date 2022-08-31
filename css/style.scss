@@ -1684,6 +1684,14 @@ h2.off,p.off{display: none;}
         font-size: 25px;
         margin-bottom: 20px;
       }
+      ul{
+        margin-left: 20px;
+        li{
+          list-style: disc;
+          font-size: 20px;
+          margin-bottom: 10px;
+        }
+      }
     }
   }
 }

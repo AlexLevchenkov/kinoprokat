@@ -1902,6 +1902,14 @@ h2.off, p.off {
   font-size: 25px;
   margin-bottom: 20px;
 }
+.news-block .news-block__text ul {
+  margin-left: 20px;
+}
+.news-block .news-block__text ul li {
+  list-style: disc;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
 
 .news-block__alternative .news-block__text {
   font-size: 20px;
