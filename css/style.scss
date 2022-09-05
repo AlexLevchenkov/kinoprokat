@@ -1287,6 +1287,9 @@ h2.off,p.off{display: none;}
     justify-content: center;
     gap: 20px;
   }
+  &.three__grid .main_menu{
+    width: 25%;
+  }
   &.audio_processors .product_menu{
     &:hover{
       &::before{
@@ -1567,7 +1570,7 @@ h2.off,p.off{display: none;}
           & h2{
             font-size: 1em;
           }
-          & p{
+          & ul li{
             font-size: 0.65em;
           }
           &:hover .img__block{

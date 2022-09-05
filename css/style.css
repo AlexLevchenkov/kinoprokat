@@ -1525,6 +1525,9 @@ h2.off, p.off {
   justify-content: center;
   gap: 20px;
 }
+.production_block.three__grid .main_menu {
+  width: 25%;
+}
 .production_block.audio_processors .product_menu:hover::before {
   height: 68%;
 }
@@ -1795,7 +1798,7 @@ h2.off, p.off {
 .product-block .product-block__similar-item .similar-item-block__product.production_block .product_menu h2 {
   font-size: 1em;
 }
-.product-block .product-block__similar-item .similar-item-block__product.production_block .product_menu p {
+.product-block .product-block__similar-item .similar-item-block__product.production_block .product_menu ul li {
   font-size: 0.65em;
 }
 .product-block .product-block__similar-item .similar-item-block__product.production_block .product_menu:hover .img__block::after {
