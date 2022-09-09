@@ -2369,6 +2369,9 @@ h2.off, p.off {
   .v_3 .audio .product-block__similar-item {
     margin-top: 580px;
   }
+  .v_3 .amplifiers .product-block__similar-item {
+    margin-top: 480px;
+  }
   .v_3 .product-block__title {
     margin-top: 50px;
   }
