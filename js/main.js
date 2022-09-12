@@ -214,4 +214,10 @@ $(document).ready(function(){
       $(".product-block__similar-item").css(`top`,`${img_block__slider + main_advantages + 220}px`);
     },50)
   }
+  //Прокрутка в категориях товаров
+  if($(".production_menu_block").length){
+    let selected = $(".production_menu_block .main_menu.selected")
+    let main_menu_selected = selected.offset().left - selected.parent().offset().left;
+    $(".production_menu_block").scrollLeft(main_menu_selected-40)
+  }
 });
