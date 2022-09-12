@@ -1553,7 +1553,6 @@ h2.off,p.off{display: none;}
     }
   }
   .product-block__similar-item {
-    margin-top: 10px;
     & .similar-item-block__title {
       font-size: 1.5em;
       text-align: center;
@@ -2147,14 +2146,7 @@ h2.off,p.off{display: none;}
     }
     .product-block__similar-item{
       position: fixed;
-      margin-top: 410px;
       width: 440px;
-    }
-    .audio .product-block__similar-item{
-      margin-top: 580px;
-    }
-    .amplifiers .product-block__similar-item{
-      margin-top: 480px;
     }
     .product-block__title{
       margin-top: 50px;

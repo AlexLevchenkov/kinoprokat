@@ -204,4 +204,14 @@ $(document).ready(function(){
   if($(window).width()<768){
     $('.news-block__name.left').click()
   }
+  //Размещение "Похожие товары"
+  if($(".product-block__similar-item").length){
+    setTimeout(function(){
+      let img_block__slider = $(".img-block__slider").height();
+      let main_advantages = $(".main-advantages").height() || 0;
+      console.log(img_block__slider);
+      console.log(main_advantages);
+      $(".product-block__similar-item").css(`top`,`${img_block__slider + main_advantages + 220}px`);
+    },50)
+  }
 });
