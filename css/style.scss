@@ -7,6 +7,15 @@
   font-weight: 400;
   font-style: normal;
 } //font-family: 'DIN Pro Regular';
+@font-face {
+  font-family: 'DIN Pro Bold';
+  src: local('DIN Pro Bold'), local('DIN-Pro-Bold'),
+      url('DINPro-Bold.woff2') format('woff2'),
+      url('DINPro-Bold.woff') format('woff'),
+      url('DINPro-Bold.ttf') format('truetype');
+  font-weight: 800;
+  font-style: normal;
+} //font-family: 'DIN Pro Bold';
 
 :root {
   --background-dark: linear-gradient(0deg, #333333 0%, rgba(0, 0, 0, 0.95) 100%);
@@ -173,7 +182,7 @@ body{
   }
   &.production{
     section.main{height: 100vh; padding: 11vh 0;}
-    & .main .main_menu h2{color: #fff;}
+    & .main .main_menu h2{color: #fff; font-size: 17px; line-height: 15px;}
     &.horizontal section.main .container {
       grid-template-columns: repeat(4, 1fr);
       grid-template-rows: repeat(3, 1fr);
@@ -308,6 +317,7 @@ section.menu{
         background: transparent;
         margin: 0;
         width: 100%;
+        font-size: 1em;
       }
     }
   }
@@ -328,14 +338,14 @@ h2.off,p.off{display: none;}
 #contacts{grid-area:F}
 
 #production img{height: 100%;top: 35%;}
-#news img{height: 100%;top: 40%;}
+#news img{height: 93%;top: 40%;}
 #about_us img{height: 70%;top: 40%;}
 #contacts img{height: 80%;top: 45%;}
 #services img{height: 80%;}
 
 .block_name{
   max-width: 500px;
-  margin: 15px auto;
+  margin: 0 auto 20px;
   font-family: 'DIN Pro Regular';
   width: 100%;
   border-radius: 10px;
@@ -344,7 +354,7 @@ h2.off,p.off{display: none;}
   text-transform: uppercase;
   font-size: 25px;
   text-align: center;
-  margin-bottom: 10px;
+  font-family: 'DIN Pro Bold';
   &.large{max-width: 600px;}
   &.huge{max-width:800px}
 }
@@ -467,13 +477,14 @@ h2.off,p.off{display: none;}
     background: #6b110c;
     border-radius: 20px;
     color: #000;
-    font-size: 1em;
+    font-size: 19px;
     font-weight: normal;
     padding: 3px 0;
   }
-  & .large {height: 28px !important; font-size: 0.65em !important;}
-  & .larger {padding: 4px 0;}
-  &.large img{height: 25%;}
+  // & .large {height: 28px !important; font-size: 0.65em !important;}
+  & .large {width: 83%;}
+  & .larger {width: 83%;}
+  // &.large img{height: 25%;}
 }
 .footer{
   position: absolute;
@@ -1121,6 +1132,7 @@ h2.off,p.off{display: none;}
   overflow-x: scroll;
   padding-bottom: 10px;
   height: auto;
+  margin-bottom: 20px;
   &::-webkit-scrollbar {
     height: 5px;
     width: 10px;
@@ -1139,6 +1151,7 @@ h2.off,p.off{display: none;}
       height: 120px;
       margin-right: 20px;
       box-shadow: none;
+      border-radius: 20px;
       &.selected{
         background: var(--background-red) !important;
         h2{color: #fff !important;}
@@ -1154,6 +1167,7 @@ h2.off,p.off{display: none;}
         background: none;
         bottom: 0;
         height: auto !important;
+        font-family: 'DIN Pro Bold';
       }
     }
   }
@@ -1197,6 +1211,12 @@ h2.off,p.off{display: none;}
     padding: 5px;
     text-align: center;
     position: relative;
+
+  .img__block{
+    min-height: 150px;
+    align-items: center;
+    display: flex;
+    background: white;}
     & img{
       width: 100%;
     }
@@ -1207,6 +1227,7 @@ h2.off,p.off{display: none;}
       text-shadow: 2px 2px 2px #000;
       padding: 5px 0;
       font-weight: bolder;
+      font-family: 'DIN Pro Black';
     }
     & p{
       color: #fff;
@@ -1218,7 +1239,7 @@ h2.off,p.off{display: none;}
       }
     }
     & .main-advantages{
-      border-top: 2px solid #fff;
+      border-top: 1px solid #fff;
       padding: 5px 0;
       li{
         color: #fff;
@@ -1373,6 +1394,7 @@ h2.off,p.off{display: none;}
       }
       & .slider__mini-photo{
         width: 25%;
+        border-right: 2px solid gainsboro;
         & img{
           padding: 5px;
           &:first-child{padding-top: 0;}
@@ -1393,7 +1415,8 @@ h2.off,p.off{display: none;}
   & .product-block__title {
 
     & .title-block__title-product {
-      font-size: 2em;
+      font-size: 1.7em;
+      line-height: 1.3em;
       text-transform: uppercase;
       font-weight: bold;
       letter-spacing: 1px;
@@ -1422,6 +1445,7 @@ h2.off,p.off{display: none;}
   }
   & .product-block__info {
     min-height: 50vh;
+    padding-bottom: 20px;
     & .info-block__menu {
       margin: 10px 0;
       width: 100%;
@@ -1434,9 +1458,11 @@ h2.off,p.off{display: none;}
         color: #fff;
         text-align: center;
         margin: 7px;
+        font-size: 20px;
         &.selected{
           background: var(--background-red);
           border-radius: 5px;
+          font-family: 'DIN Pro Bold';
         }
       }
     }
@@ -1543,7 +1569,7 @@ h2.off,p.off{display: none;}
           & .subtitle{
             line-height: 2em;
             font-size: 1.4em;
-            font-weight: bold;
+            font-family: 'DIN Pro Bold';
           }
         }
         &.selected{
@@ -1554,11 +1580,12 @@ h2.off,p.off{display: none;}
   }
   .product-block__similar-item {
     & .similar-item-block__title {
-      font-size: 1.5em;
+      font-size: 1.3em;
       text-align: center;
       text-transform: uppercase;
       padding: 7px 0px;
       border-radius: 10px;
+      font-family: 'DIN Pro Bold';
     }
     & .similar-item-block__product {
       margin-top: 15px;
@@ -1566,6 +1593,9 @@ h2.off,p.off{display: none;}
         & .product_menu {
           margin: 5px;
           width: 30% !important;
+          & .img__block{
+            min-height: auto;
+          }
           & h2{
             font-size: 1em;
           }
@@ -1588,6 +1618,7 @@ h2.off,p.off{display: none;}
             padding: 0px;
             background-color: #fff;
             float: left;
+            min-height: auto;
           }
           & .text__block{
             float: right;
@@ -2138,6 +2169,7 @@ h2.off,p.off{display: none;}
       position: fixed;
       left: 50%;
       transform: translate(-50%,0);
+      margin-top: 20px;
     }
     .product-block__img{
       margin-top: 50px;
