@@ -1904,6 +1904,9 @@ h2.off, p.off {
   text-align: justify;
   margin-bottom: 10px;
 }
+.characteristics__table tr th {
+  font-family: "DIN Pro Bold";
+}
 .characteristics__table-four-column tr th, .characteristics__table-four-column tr td {
   width: 25%;
 }

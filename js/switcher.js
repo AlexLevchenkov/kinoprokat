@@ -18,6 +18,7 @@ $(document).ready(function(){
         $(value).addClass("social_svg_dark")
       })
       $("body").addClass("dark").removeClass("light")
+      localStorage.setItem("user-theme", "dark")
     }else{
       $.each(header_img, function(i, value) {
         let temp = $(value).attr("data")
@@ -32,8 +33,25 @@ $(document).ready(function(){
         $(value).removeClass("social_svg_dark")
       })
       $("body").addClass("light").removeClass("dark")
+      localStorage.setItem("user-theme", "light")
     }
   })
+  const saveUserTheme=localStorage.getItem('user-theme')
+  let userTheam
+  if(window.matchMedia){
+    userTheam = window.matchMedia('(prefers-color-scheme: dark)').matches? 'dark' : 'light'
+  }
+  window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change',e=>{
+    !saveUserTheme ? change() :null
+  })
+  function setThemeClass(){
+    if(saveUserTheme){
+      $('body').addClass(saveUserTheme)
+    }else{
+      $('body').addClass(userTheam)
+    }
+  }
+  setThemeClass()
   if ($("body").hasClass("dark")) {
     $("#switcher").click()
     $("#switcher").click()
