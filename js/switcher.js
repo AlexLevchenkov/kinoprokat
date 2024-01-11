@@ -2,8 +2,8 @@ $(document).ready(function(){
   // Смена светлого и тёмного интерфейса
   $("#switcher").click(function(){
     const mode = $("body").hasClass("light")
-    let header_img = $(".header object")
-    let footer_img = $(".footer button")
+    let header_img = $("header object")
+    let footer_img = $("footer button")
     if (mode) {
       $.each(header_img, function(i, value) {
         let temp = $(value).attr("data")
