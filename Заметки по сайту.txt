@@ -22,3 +22,132 @@
 Товар КРЕСЛО
 Определиться с таблицей ламп
 Определиться с киноэкранами
+
+
+Неиспользуемые фото:
+img/3D-POLAR-CE-2017_water.pdf
+img/animation/services.gif
+img/animation/services_new.png
+img/animation/services_revews.gif
+img/animation/services_revews.png
+img/animation/snow.gif
+img/production/3d/accessories.jpg
+img/production/amplifiers/Fidek FDL-1500A.jpg
+img/production/amplifiers/Fidek FDL-1500AP.png
+img/production/amplifiers/Fidek FDL-3000A.jpg
+img/production/amplifiers/Fidek FDL-4500A.jpg
+img/production/amplifiers/Fidek FDM-1000AP.png
+img/production/amplifiers/Fidek FDM-1200AP.png
+img/production/audio_processors/audio_processors.png
+img/production/audio_processors/PGS_APC-870_3.png
+img/production/ccs/large/C-SUR10.png
+img/production/ccs/large/C-SUR10_2.png
+img/production/ccs/large/C-SUR10_3.png
+img/production/ccs/large/CP SUB-2 .png
+img/production/ccs/large/CP SUB-2 _2.png
+img/production/ccs/large/CP SUB-2 _3.png
+img/production/ccs/large/CP-F1.png
+img/production/ccs/large/CP-F1_2.png
+img/production/ccs/large/CP-F1_3.png
+img/production/ccs/large/CP-F2.png
+img/production/ccs/large/CP-F2_2.png
+img/production/ccs/large/CP-F2_3.png
+img/production/ccs/large/CP-F3.png
+img/production/ccs/large/CP-F3_2.png
+img/production/ccs/large/CP-F3_3.png
+img/production/lighting_equipment/4.jpg
+img/production/optional_equipment/3.jpg
+img/production/SP2K_3-4_left_standard jpg.jpg
+img/projects/large_table.jpg
+img/projects/most_dnepr/2/index.html
+img/projects/most_dnepr/2/photo_001.jpg
+img/projects/most_dnepr/2/photo_002.jpg
+img/projects/most_dnepr/2/photo_004.jpg
+img/projects/most_dnepr/3/index.html
+img/projects/most_dnepr/4/index.html
+img/projects/most_dnepr/5/index.html
+img/projects/most_dnepr/5/photo_015.jpg
+img/projects/most_dnepr/5/photo_016.jpg
+img/projects/most_dnepr/5/photo_019.jpg
+img/projects/most_dnepr/5/photo_027.jpg
+img/projects/most_dnepr/6/index.html
+img/projects/most_dnepr/6/photo_036.jpg
+img/projects/most_dnepr/6/photo_037.jpg
+img/projects/most_dnepr/6/photo_045.jpg
+img/projects/most_dnepr/6/photo_046.jpg
+img/projects/most_dnepr/6/photo_047.jpg
+img/projects/most_dnepr/index.html
+img/projects/most_dnepr/VIP1/index.html
+img/projects/most_dnepr/VIP1/Photo_025.jpg
+img/projects/most_dnepr/VIP1/Photo_026.jpg
+img/projects/most_dnepr/VIP1/Photo_028.jpg
+img/projects/most_dnepr/VIP1/Photo_029.jpg
+img/projects/most_dnepr/VIP1/Photo_030.jpg
+img/projects/most_dnepr/VIP1/Photo_032.jpg
+img/projects/most_dnepr/VIP1/Photo_034.jpg
+img/projects/planeta_kino_appolo/Photo_002.jpg
+img/projects/planeta_kino_appolo/Photo_003.jpg
+img/projects/planeta_kino_appolo/Photo_003_preview_1.jpg
+img/projects/planeta_kino_appolo/Photo_004.jpg
+img/projects/planeta_kino_appolo/Photo_007.jpg
+img/projects/planeta_kino_appolo/photo_007_preview.jpg
+img/projects/planeta_kino_appolo/Photo_012.jpg
+img/projects/planeta_kino_appolo/Photo_017.jpg
+img/projects/planeta_kino_appolo/Photo_041.jpg
+img/projects/planeta_kino_appolo/Photo_048.jpg
+img/projects/planeta_kino_appolo/Photo_053.jpg
+img/projects/planeta_kino_appolo/Photo_064.jpg
+img/projects/planeta_kino_appolo/Photo_065.jpg
+img/projects/planeta_kino_appolo/photo_41_preview.jpg
+img/services/1-4.svg
+img/shuffle-two-arrows-symbol_icon-icons.com_72935.svg
+img/v_1/about_us.png
+img/v_1/about_us_ru.png
+img/v_1/amplif.png
+img/v_1/barco_1.jpg
+img/v_1/barco_2.jpg
+img/v_1/barco_3.jpg
+img/v_1/barco_4.jpg
+img/v_1/barco_5.jpg
+img/v_1/barco_6.jpg
+img/v_1/barco_7.jpg
+img/v_1/block_name_mb.png
+img/v_1/block_name_pc.png
+img/v_1/button.png
+img/v_1/contacts.png
+img/v_1/contacts_ru.png
+img/v_1/cp_f1.png
+img/v_1/cp_f2.png
+img/v_1/cp_f3.png
+img/v_1/cp_sub_1.png
+img/v_1/cp_sub_2.png
+img/v_1/c_f1.png
+img/v_1/c_f2.png
+img/v_1/c_sur10.png
+img/v_1/c_sur8.png
+img/v_1/facebook_dark.png
+img/v_1/facebook_light.png
+img/v_1/instagram_dark.png
+img/v_1/instagram_light.png
+img/v_1/language_back_dark.png
+img/v_1/linkedin_dark.png
+img/v_1/linkedin_light.png
+img/v_1/logo.png
+img/v_1/logo_dark.png
+img/v_1/news.png
+img/v_1/news_ru.png
+img/v_1/production.png
+img/v_1/production_ru.png
+img/v_1/projectors.png
+img/v_1/projects.png
+img/v_1/projects_ru.png
+img/v_1/servers.png
+img/v_1/services_ru.png
+img/v_1/switch_dark.png
+img/v_1/telegram_dark.png
+img/v_1/telegram_light.png
+img/v_1/tms.png
+img/v_1/twitter_dark.png
+img/v_1/twitter_light.png
+img/v_1/youtube_dark.png
+img/v_1/youtube_light.png
